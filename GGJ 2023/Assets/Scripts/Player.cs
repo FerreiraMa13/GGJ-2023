@@ -8,17 +8,19 @@ public class Player : MonoBehaviour
     //private PlayerControllerClass playerControllerClass; 
     private Player player;
     private PlayerController playerController;
-    private InputAction movement; 
+    private InputAction movement;
+    private Rigidbody2D rb; 
 
     GameObject gameManager;
 
-    [Range(0, 10)] public float playerVelocity;
+    [Range(0, 10)] public float playerVelocity = 1;
+    [Range(0, 10)] public float jumpMultiplier = 1;
 
 
     private void Awake()
     {
         playerController = new PlayerController();
-
+        rb = GetComponent<Rigidbody2D>(); 
     }
 
     private void OnEnable()
@@ -42,13 +44,37 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (movement.ReadValue<Vector2>().magnitude > 0)
+        { 
+            if (movement.ReadValue<Vector2>().x < 0)
+            {
+                rb.velocity = new Vector2(-playerVelocity, rb.velocity.y);
+            }
+            if (movement.ReadValue<Vector2>().x > 0)
+            {
+                rb.velocity = new Vector2(playerVelocity, rb.velocity.y);
+            }
+            if (movement.ReadValue<Vector2>().y < 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -playerVelocity);
+            }
+            if (movement.ReadValue<Vector2>().y > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, playerVelocity);
+            }
+        }
+        else 
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y); 
+        }
+
     }
 
     public void DoJump(InputAction.CallbackContext obj)
     {
         Debug.Log("JUMPED");
+        rb.AddForce(new Vector2(0f, 1000f * jumpMultiplier));
     }
 }
