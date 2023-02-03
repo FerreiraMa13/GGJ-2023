@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //private PlayerControllerClass playerControllerClass; 
+
+    GameObject gameManager;
+    [Range(0, 10)] public float playerVelocity;
+
+
+    private void Awake()
+    {
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
