@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private InputAction movement;
     private Rigidbody2D rb; 
 
+    public bool canFly = false;
+
     GameObject gameManager;
 
     [Range(0, 10)] public float playerVelocity = 1;
@@ -46,8 +48,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (movement.ReadValue<Vector2>().magnitude > 0)
-        { 
+        if (movement.ReadValue<Vector2>().x != 0)
+        {
             if (movement.ReadValue<Vector2>().x < 0)
             {
                 rb.velocity = new Vector2(-playerVelocity, rb.velocity.y);
@@ -56,13 +58,24 @@ public class Player : MonoBehaviour
             {
                 rb.velocity = new Vector2(playerVelocity, rb.velocity.y);
             }
-            if (movement.ReadValue<Vector2>().y < 0)
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
+        if (movement.ReadValue<Vector2>().y != 0)
+        { 
+            if (canFly)
             {
-                rb.velocity = new Vector2(rb.velocity.x, -playerVelocity);
-            }
-            if (movement.ReadValue<Vector2>().y > 0)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, playerVelocity);
+                if (movement.ReadValue<Vector2>().y < 0)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, -playerVelocity);
+                }
+                if (movement.ReadValue<Vector2>().y > 0)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, playerVelocity);
+                }
             }
         }
         else 

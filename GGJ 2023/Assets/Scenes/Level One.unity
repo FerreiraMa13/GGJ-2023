@@ -433,8 +433,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8270616989147191471, guid: d957f81995ae3f7428b2a28e48f8a571, type: 3}
+      propertyPath: jumpMultiplier
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: -8270616989147191471, guid: d957f81995ae3f7428b2a28e48f8a571, type: 3}
       propertyPath: playerVelocity
-      value: 5.4
+      value: 8.06
       objectReference: {fileID: 0}
     - target: {fileID: 1359835529015602140, guid: d957f81995ae3f7428b2a28e48f8a571, type: 3}
       propertyPath: m_Name
