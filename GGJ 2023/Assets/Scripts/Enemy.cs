@@ -107,8 +107,12 @@ public class Enemy : MonoBehaviour
                 }
                 break;
             case EnemyState.PATROLLING:
-                MoveTowards(checkpoints[checkpoint_index].position, true);
-                CheckProximityPatrol();
+                if(checkpoints.Count > 0)
+                {
+                    MoveTowards(checkpoints[checkpoint_index].position, true);
+                    CheckProximityPatrol();
+                }
+                
                 break;
             case EnemyState.IDLE:
                 rb.velocity = new Vector2(0, rb.velocity.y);
@@ -183,5 +187,14 @@ public class Enemy : MonoBehaviour
         attack_w_timer = attack_window;
         attack_c_timer = attack_cooldown;
         Debug.Log("Attack");
+    }
+    public void DealDamage(int damage_taken)
+    {
+        hp -= damage_taken;
+        Debug.Log(hp);
+        if(hp <= 0)
+        {
+            hp = 0;
+        }
     }
 }

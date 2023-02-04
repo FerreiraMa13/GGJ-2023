@@ -11,9 +11,11 @@ public class Player : MonoBehaviour
     private GameObject gameManager;
     private CharacterAnimations animator;
     private Collider2D collision_collider;
+    private List<Enemy> enemies = new();
 
     public bool canFly = false;
     public int groundLayer = 3;
+    public int enemyLayer = 6;
 
     public float playerVelocity = 1;
     public float jumpMultiplier = 1;
@@ -139,6 +141,17 @@ public class Player : MonoBehaviour
     {
         movementInput = ctx.ReadValue<Vector2>();
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == enemyLayer)
+        {
+            var temp_enemy_script = collision.gameObject.GetComponent<Enemy>();
+            if(!enemies.Contains(temp_enemy_script))
+            {
+                enemies.Add(temp_enemy_script);
+            }
+        }
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         GameObject hitObject = collision.gameObject;
@@ -156,7 +169,6 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -171,6 +183,14 @@ public class Player : MonoBehaviour
                 {
                     grounded = false;
                 }
+            }
+        }
+        if(hitObject.layer == enemyLayer)
+        {
+            var temp_enemy_script = hitObject.GetComponent<Enemy>();
+            if(enemies.Contains(temp_enemy_script))
+            {
+                enemies.Remove(temp_enemy_script);
             }
         }
     }
@@ -190,22 +210,46 @@ public class Player : MonoBehaviour
         }
         return -1;
     }
-
     public void Attack()
     {
         if(attack_timer <= 0)
         {
-            animator.SetAttackType(attack_index);
-            if(attack_index == 1)
+            AttackAnimation();
+        }
+    }
+    public void AttackAnimation()
+    {
+        animator.SetAttackType(attack_index);
+        if (attack_index == 1)
+        {
+            attack_index++;
+        }
+        else
+        {
+            attack_index--;
+        }
+        animator.AttackTrigger();
+        attack_timer = attack_cooldown;
+    }
+
+    public void FlagHit()
+    {
+        Debug.Log("Player Flag");
+        if (enemies.Count > 0)
+        {
+            float distance = 9999;
+            int index = 9999;
+            for (int i = 0; i < enemies.Count; i++)
             {
-                attack_index++;
+                float new_distance = Mathf.Abs((enemies[i].transform.position - transform.position).magnitude);
+                if(new_distance < distance)
+                {
+                    distance = new_distance;
+                    index = i;
+                }
             }
-            else
-            {
-                attack_index--;
-            }
-            animator.AttackTrigger();
-            attack_timer = attack_cooldown;
+
+            enemies[index].DealDamage(1);
         }
     }
 }
