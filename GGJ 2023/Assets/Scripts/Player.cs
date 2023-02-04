@@ -28,6 +28,9 @@ public class Player : MonoBehaviour
     private Vector2 movementInput = Vector2.zero;
     [SerializeField] private bool grounded = false;
 
+    public float attack_cooldown = 0.2f;
+    private float attack_timer = 0.0f;
+    private int attack_index = 1;
     private void Awake()
     {
         playerController = new PlayerController();
@@ -116,6 +119,11 @@ public class Player : MonoBehaviour
         }
 
         rb.velocity = new Vector2(moveX, moveY);
+
+        if(attack_timer > 0)
+        {
+            attack_timer -= Time.deltaTime;
+        }
     }
     public void Jump(InputAction.CallbackContext ctx)
     {
@@ -145,7 +153,6 @@ public class Player : MonoBehaviour
                     sfxManager.sfxInstance.audio.PlayOneShot(sfxManager.sfxInstance.land);
                     jumpCounter = 0;
                     grounded = true;
-                    
                 }
             }
         }
@@ -165,7 +172,6 @@ public class Player : MonoBehaviour
                     grounded = false;
                 }
             }
-
         }
     }
     void TakeDamage(int damage)
@@ -183,5 +189,23 @@ public class Player : MonoBehaviour
             return collision_collider.bounds.extents.x;
         }
         return -1;
+    }
+
+    public void Attack()
+    {
+        if(attack_timer <= 0)
+        {
+            animator.SetAttackType(attack_index);
+            if(attack_index == 1)
+            {
+                attack_index++;
+            }
+            else
+            {
+                attack_index--;
+            }
+            animator.AttackTrigger();
+            attack_timer = attack_cooldown;
+        }
     }
 }

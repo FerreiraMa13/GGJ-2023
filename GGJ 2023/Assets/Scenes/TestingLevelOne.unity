@@ -52362,6 +52362,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f0d24901-d580-4c96-bae7-0850faf15cde
     m_ActionName: PlayerControls/Interact[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4048699130613316819}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fdb60245-3b09-4264-8f8e-ea934dd84b30
+    m_ActionName: PlayerControls/Attack[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerControls
@@ -53038,6 +53054,7 @@ MonoBehaviour:
   idleAttackBool: 0
   jumpBool: 0
   fallingBool: 0
+  moveAttackBool: 0
   attackBool: 0
 --- !u!95 &6679976444015115644
 Animator:

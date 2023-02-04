@@ -37,7 +37,7 @@ public class CharacterAnimations : MonoBehaviour
     void Update()
     {
         anim?.SetFloat(hash.runBool, player_input);
-        anim?.SetFloat(hash.attackBool, attack_input);
+        //anim?.SetFloat(hash.moveAttackBool, attack_input);
         switch (CurrentAnim)
         {
             case 0:
@@ -54,5 +54,15 @@ public class CharacterAnimations : MonoBehaviour
                 anim?.SetBool(hash.fallingBool, true);
                 break;
         }
+    }
+
+    public void AttackTrigger()
+    {
+        anim.SetTrigger(hash.attackTrigger);
+    }
+    public void SetAttackType(int type)
+    {
+        attack_input = type;
+        anim?.SetInteger(hash.attackFloat, type);
     }
 }
