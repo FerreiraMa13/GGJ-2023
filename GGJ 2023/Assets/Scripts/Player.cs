@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private InputAction movement;
     private Rigidbody2D rb;
     private GameObject gameManager;
+    private Collider2D collision_collider;
 
     public bool canFly = false;
     public int groundLayer = 3;
@@ -27,6 +28,15 @@ public class Player : MonoBehaviour
     {
         playerController = new PlayerController();
         rb = GetComponent<Rigidbody2D>();
+        foreach (var comp in GetComponents<Collider2D>())
+        {
+            if (!comp.isTrigger)
+            {
+                collision_collider = comp;
+                break;
+            }
+        }
+        collision_collider = GetComponent<BoxCollider2D>();
         height = GetComponent<BoxCollider2D>().bounds.extents.y;
     }
 
@@ -81,5 +91,14 @@ public class Player : MonoBehaviour
             
         }
         
+    }
+
+    public float GetColliderExtentX()
+    {
+        if(collision_collider)
+        {
+            return collision_collider.bounds.extents.x;
+        }
+        return -1;
     }
 }
