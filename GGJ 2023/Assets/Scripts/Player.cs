@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     public float jumpMultiplier = 1;
     public float BaseJumpForce = 1000f;
     public float maxJumpCounter = 1;
+    public int maxhealth = 100;
+    public int currenthealth;
+    public Healthbar healthbar;
+    public Pulse pulse;
     private float jumpCounter = 0;
 
     private float height;
@@ -26,6 +30,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         playerController = new PlayerController();
+        currenthealth = maxhealth;
+        healthbar.SetMaxHealth(maxhealth);
         rb = GetComponent<Rigidbody2D>();
         height = GetComponent<BoxCollider2D>().bounds.extents.y;
     }
@@ -80,6 +86,23 @@ public class Player : MonoBehaviour
             }
             
         }
+        
+    }
+
+    //HEALTH DEBUG 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            TakeDamage(20);
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        currenthealth -= damage;
+        pulse.pulse();
+        healthbar.SetHealth(currenthealth);
         
     }
 }
