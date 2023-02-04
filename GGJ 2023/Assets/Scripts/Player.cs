@@ -105,7 +105,6 @@ public class Player : MonoBehaviour
             TakeDamage(20);
         }
     }
-
     void FixedUpdate()
     {
         
@@ -149,11 +148,26 @@ public class Player : MonoBehaviour
                     
                 }
             }
-            
         }
         
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        GameObject hitObject = collision.gameObject;
+        if (hitObject.layer == groundLayer)
+        {
+            if (grounded)
+            {
+                float playerLowPoint = transform.position.y + height;
+                float objectHighPoint = hitObject.transform.position.y - collision.bounds.extents.y;
+                if (playerLowPoint > objectHighPoint)
+                {
+                    grounded = false;
+                }
+            }
 
+        }
+    }
     void TakeDamage(int damage)
     {
         currenthealth -= damage;

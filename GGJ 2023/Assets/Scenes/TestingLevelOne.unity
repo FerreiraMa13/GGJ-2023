@@ -53038,6 +53038,7 @@ MonoBehaviour:
   idleAttackBool: 0
   jumpBool: 0
   fallingBool: 0
+  attackBool: 0
 --- !u!95 &6679976444015115644
 Animator:
   serializedVersion: 4
@@ -53082,7 +53083,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 1}
+  m_Size: {x: 1.2, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &6703504327627602123
 Rigidbody2D:
