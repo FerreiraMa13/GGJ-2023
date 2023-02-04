@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
     private Transform current_checkpoint;
     private int checkpoint_direction = 1;
     private float speed_multiplier = 1.0f;
-    private float chase_multiplier = 2.0f;
+    private float chase_multiplier = 1.2f;
 
     [SerializeField]  private EnemyState current_state = EnemyState.IDLE;
 

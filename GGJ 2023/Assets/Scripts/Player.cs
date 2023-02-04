@@ -32,7 +32,10 @@ public class Player : MonoBehaviour
     {
         playerController = new PlayerController();
         currenthealth = maxhealth;
-        healthbar.SetMaxHealth(maxhealth);
+        if(healthbar)
+        {
+            healthbar.SetMaxHealth(maxhealth);
+        }
         rb = GetComponent<Rigidbody2D>();
         foreach (var comp in GetComponents<Collider2D>())
         {
@@ -140,9 +143,10 @@ public class Player : MonoBehaviour
                 float objectHighPoint = hitObject.transform.position.y - collision.bounds.extents.y;
                 if (playerLowPoint > objectHighPoint)
                 {
+                    sfxManager.sfxInstance.audio.PlayOneShot(sfxManager.sfxInstance.land);
                     jumpCounter = 0;
                     grounded = true;
-                    sfxManager.sfxInstance.audio.PlayOneShot(sfxManager.sfxInstance.land);
+                    
                 }
             }
             
