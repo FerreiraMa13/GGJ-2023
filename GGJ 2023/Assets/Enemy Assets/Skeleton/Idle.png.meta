@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 18f0b4bc29e14fc4b9357c4f3402f2f9
+guid: 181074e3191e97b42ba5f4bff6cdb21e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,118 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack2NoMovement
+      name: Idle
       rect:
         serializedVersion: 2
-        x: 30
-        y: 0
-        width: 38
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e16853f026f53d3469493d0913dddbe6
-      internalID: 879514155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Attack2NoMovement_1
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 0
-        width: 42
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3a397d1b20e4274fb96ff9870966756
-      internalID: -706536807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Attack2NoMovement_2
-      rect:
-        serializedVersion: 2
-        x: 267
-        y: 0
-        width: 77
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 758f5085721996b49ac9ecc6e788b654
-      internalID: -118912369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Attack2NoMovement_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 029cc253c90a61f4e8ffe3e9dfbbb3a9
-      internalID: -1592953241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Attack2NoMovement_4
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 0
-        width: 46
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: caf2608a1c3e7ea4ca4bf0e252d0f96a
-      internalID: -1803873964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Attack2NoMovement_5
-      rect:
-        serializedVersion: 2
-        x: 624
-        y: 0
+        x: 60
+        y: 49
         width: 45
-        height: 36
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,8 +133,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a93bc9cd3edf81a4296c23bdf3645189
-      internalID: 372493084
+      spriteID: 39c3610aea2f7aa49987849dac9549de
+      internalID: -1032361690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 49
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e70fd1470b1a5488fb24b921ea4528
+      internalID: -1431113619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 49
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31521d41dae033343ab4404e8ca199e6
+      internalID: 1143954869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 49
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de317aee186066249bb69b6354ea6746
+      internalID: -765349544
       vertices: []
       indices: 
       edges: []
@@ -255,12 +213,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      _Attack2NoMovement_3: -1592953241
-      _Attack2NoMovement_5: 372493084
-      _Attack2NoMovement_2: -118912369
-      Attack2NoMovement: 879514155
-      _Attack2NoMovement_4: -1803873964
-      _Attack2NoMovement_1: -706536807
+      Idle: -1032361690
+      Idle_1: -1431113619
+      Idle_3: -765349544
+      Idle_2: 1143954869
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
