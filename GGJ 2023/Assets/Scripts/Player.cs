@@ -11,12 +11,14 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private GameObject gameManager;
     private CharacterAnimations animator;
-// can i edit this? can you see it?
+    private Collider2D collision_collider;
+    private List<Enemy> enemies = new();
 
     public bool canFly = false;
     public GameObject healthb;
     public TMPro.TMP_Text text;
     public int groundLayer = 3;
+    public int enemyLayer = 6;
 
     public float playerVelocity = 1;
     public float jumpMultiplier = 1;
@@ -37,12 +39,27 @@ public class Player : MonoBehaviour
     private Vector2 movementInput = Vector2.zero;
     [SerializeField] private bool grounded = false;
 
+    public float attack_cooldown = 0.2f;
+    private float attack_timer = 0.0f;
+    private int attack_index = 1;
     private void Awake()
     {
         playerController = new PlayerController();
         currenthealth = maxhealth;
-        healthbar.SetMaxHealth(maxhealth);
+        if(healthbar)
+        {
+            healthbar.SetMaxHealth(maxhealth);
+        }
         rb = GetComponent<Rigidbody2D>();
+        foreach (var comp in GetComponents<Collider2D>())
+        {
+            if (!comp.isTrigger)
+            {
+                collision_collider = comp;
+                break;
+            }
+        }
+        collision_collider = GetComponent<BoxCollider2D>();
         height = GetComponent<BoxCollider2D>().bounds.extents.y;
         animator = GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<CharacterAnimations>();
         fading = false;
@@ -139,7 +156,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-
     void FixedUpdate()
     {
         
@@ -151,6 +167,11 @@ public class Player : MonoBehaviour
         }
 
         rb.velocity = new Vector2(moveX, moveY);
+
+        if(attack_timer > 0)
+        {
+            attack_timer -= Time.deltaTime;
+        }
     }
     public void Jump(InputAction.CallbackContext ctx)
     {
@@ -166,6 +187,17 @@ public class Player : MonoBehaviour
     {
         movementInput = ctx.ReadValue<Vector2>();
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == enemyLayer)
+        {
+            var temp_enemy_script = collision.gameObject.GetComponent<Enemy>();
+            if(!enemies.Contains(temp_enemy_script))
+            {
+                enemies.Add(temp_enemy_script);
+            }
+        }
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         GameObject hitObject = collision.gameObject;
@@ -177,21 +209,93 @@ public class Player : MonoBehaviour
                 float objectHighPoint = hitObject.transform.position.y - collision.bounds.extents.y;
                 if (playerLowPoint > objectHighPoint)
                 {
+                    sfxManager.sfxInstance.audio.PlayOneShot(sfxManager.sfxInstance.land);
                     jumpCounter = 0;
                     grounded = true;
-                    sfxManager.sfxInstance.audio.PlayOneShot(sfxManager.sfxInstance.land);
                 }
             }
-            
         }
-        
     }
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        GameObject hitObject = collision.gameObject;
+        if (hitObject.layer == groundLayer)
+        {
+            if (grounded)
+            {
+                float playerLowPoint = transform.position.y + height;
+                float objectHighPoint = hitObject.transform.position.y - collision.bounds.extents.y;
+                if (playerLowPoint > objectHighPoint)
+                {
+                    grounded = false;
+                }
+            }
+        }
+        if(hitObject.layer == enemyLayer)
+        {
+            var temp_enemy_script = hitObject.GetComponent<Enemy>();
+            if(enemies.Contains(temp_enemy_script))
+            {
+                enemies.Remove(temp_enemy_script);
+            }
+        }
+    }
     void TakeDamage(int damage)
     {
         currenthealth -= damage;
         pulse.pulse();
         healthbar.SetHealth(currenthealth);
         
+    }
+
+    public float GetColliderExtentX()
+    {
+        if(collision_collider)
+        {
+            return collision_collider.bounds.extents.x;
+        }
+        return -1;
+    }
+    public void Attack()
+    {
+        if(attack_timer <= 0)
+        {
+            AttackAnimation();
+        }
+    }
+    public void AttackAnimation()
+    {
+        animator.SetAttackType(attack_index);
+        if (attack_index == 1)
+        {
+            attack_index++;
+        }
+        else
+        {
+            attack_index--;
+        }
+        animator.AttackTrigger();
+        attack_timer = attack_cooldown;
+    }
+
+    public void FlagHit()
+    {
+        Debug.Log("Player Flag");
+        if (enemies.Count > 0)
+        {
+            float distance = 9999;
+            int index = 9999;
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                float new_distance = Mathf.Abs((enemies[i].transform.position - transform.position).magnitude);
+                if(new_distance < distance)
+                {
+                    distance = new_distance;
+                    index = i;
+                }
+            }
+
+            enemies[index].DealDamage(1);
+        }
     }
 }

@@ -7,12 +7,14 @@ public class CharacterAnimations : MonoBehaviour
 {
     public Animator anim;
     private CharacterHash hash;
+    private Player player;
     public int CurrentAnim;
     private float player_input = 0;
     private int attack_input = -1;
     void Awake()
     {
         anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         hash = GameObject.FindGameObjectWithTag("GameController").GetComponent<CharacterHash>();
         anim?.SetLayerWeight(1, 1f);
         //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -37,7 +39,7 @@ public class CharacterAnimations : MonoBehaviour
     void Update()
     {
         anim?.SetFloat(hash.runBool, player_input);
-        anim?.SetFloat(hash.attackBool, attack_input);
+        //anim?.SetFloat(hash.moveAttackBool, attack_input);
         switch (CurrentAnim)
         {
             case 0:
@@ -54,5 +56,20 @@ public class CharacterAnimations : MonoBehaviour
                 anim?.SetBool(hash.fallingBool, true);
                 break;
         }
+    }
+
+    public void AttackTrigger()
+    {
+        anim.SetTrigger(hash.attackTrigger);
+    }
+    public void SetAttackType(int type)
+    {
+        attack_input = type;
+        anim?.SetInteger(hash.attackFloat, type);
+    }
+
+    public void FlagHit()
+    {
+        player.FlagHit();
     }
 }
