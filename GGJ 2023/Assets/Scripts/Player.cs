@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private InputAction movement;
     private Rigidbody2D rb;
     private GameObject gameManager;
+    private CharacterAnimations animator;
 
     public bool canFly = false;
     public int groundLayer = 3;
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
         playerController = new PlayerController();
         rb = GetComponent<Rigidbody2D>();
         height = GetComponent<BoxCollider2D>().bounds.extents.y;
+        animator = GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<CharacterAnimations>();
     }
 
     private void OnEnable()
@@ -39,14 +41,51 @@ public class Player : MonoBehaviour
         playerController.Disable();
     }
 
+    private void Update()
+    {
+        animator.SetInput(Mathf.Abs(movementInput.x));
+        int frame = 0;
+
+        if (movementInput.x != 0)
+        {
+            if (movementInput.x > 0)
+            {
+                GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else if (movementInput.x < 0)
+            {
+                GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if(!grounded)
+        {
+            if (rb.velocity.y > 0)
+            {
+                frame = 3;
+            }
+            else if (rb.velocity.y < 0)
+            {
+                frame = 4;
+                
+            }
+        }
+        else
+        {
+            frame = 0;
+        }
+        animator.CurrentAnim = frame;
+    }
+
     void FixedUpdate()
     {
+        
         float moveX = movementInput.x * playerVelocity * Time.deltaTime;
         float moveY = rb.velocity.y;
         if (canFly)
         {
             moveY = movementInput.y * playerVelocity * Time.deltaTime;
         }
+
         rb.velocity = new Vector2(moveX, moveY);
     }
     public void Jump(InputAction.CallbackContext ctx)
