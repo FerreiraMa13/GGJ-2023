@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     public float playerVelocity = 1;
     public float jumpMultiplier = 1;
     public float BaseJumpForce = 1000f;
+    public float maxJumpCounter = 1;
+    private float jumpCounter = 0;
 
     private float height;
     private Vector2 movementInput = Vector2.zero;
@@ -39,10 +41,6 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!grounded && rb.IsTouchingLayers(groundLayer))
-        {
-            grounded = IsGrounded();
-        }
         float moveX = movementInput.x * playerVelocity * Time.deltaTime;
         float moveY = rb.velocity.y;
         if (canFly)
@@ -53,31 +51,24 @@ public class Player : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if(grounded && ctx.performed)
+        if(jumpCounter < maxJumpCounter && ctx.performed)
         {
-            
+            jumpCounter++;
             rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
+            
             grounded = false;
         }
-        //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
-
     }
     public void MovementInput(InputAction.CallbackContext ctx)
     {
         movementInput = ctx.ReadValue<Vector2>();
     }
-    private bool IsGrounded()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, height + 0.1f, groundLayer);
-        return hit;
-    }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         GameObject hitObject = collision.gameObject;
         if(hitObject.layer == groundLayer)
         {
-            if(!grounded)
+            if(!grounded && rb.velocity.y < 0)
             {
                 float playerLowPoint = transform.position.y + height;
                 float objectHighPoint = hitObject.transform.position.y - collision.bounds.extents.y;
@@ -85,8 +76,8 @@ public class Player : MonoBehaviour
                 Debug.Log(objectHighPoint);
                 if (playerLowPoint > objectHighPoint)
                 {
+                    jumpCounter = 0;
                     grounded = true;
-
                 }
             }
             
