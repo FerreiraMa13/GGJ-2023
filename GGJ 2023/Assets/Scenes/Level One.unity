@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 469315563}
   - component: {fileID: 469315562}
   - component: {fileID: 469315561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,12 +433,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8270616989147191471, guid: d957f81995ae3f7428b2a28e48f8a571, type: 3}
-      propertyPath: jumpMultiplier
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: -8270616989147191471, guid: d957f81995ae3f7428b2a28e48f8a571, type: 3}
-      propertyPath: playerVelocity
-      value: 8.06
+      propertyPath: BaseJumpForce
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 1359835529015602140, guid: d957f81995ae3f7428b2a28e48f8a571, type: 3}
       propertyPath: m_Name
@@ -488,9 +484,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7498671950835278665, guid: d957f81995ae3f7428b2a28e48f8a571, type: 3}
-      propertyPath: m_GravityScale
-      value: 10
+    - target: {fileID: 7611937607161669373, guid: d957f81995ae3f7428b2a28e48f8a571, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821773458779316947, guid: d957f81995ae3f7428b2a28e48f8a571, type: 3}
+      propertyPath: m_Radius
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821773458779316947, guid: d957f81995ae3f7428b2a28e48f8a571, type: 3}
+      propertyPath: m_Offset.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

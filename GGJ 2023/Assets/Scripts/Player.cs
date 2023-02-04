@@ -5,89 +5,92 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    //private PlayerControllerClass playerControllerClass; 
-    private Player player;
     private PlayerController playerController;
     private InputAction movement;
-    private Rigidbody2D rb; 
+    private Rigidbody2D rb;
+    private GameObject gameManager;
 
     public bool canFly = false;
+    public int groundLayer = 3;
 
-    GameObject gameManager;
+    public float playerVelocity = 1;
+    public float jumpMultiplier = 1;
+    public float BaseJumpForce = 1000f;
 
-    [Range(0, 10)] public float playerVelocity = 1;
-    [Range(0, 10)] public float jumpMultiplier = 1;
-
+    private float height;
+    private Vector2 movementInput = Vector2.zero;
+    [SerializeField] private bool grounded = false;
 
     private void Awake()
     {
         playerController = new PlayerController();
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
+        height = GetComponent<BoxCollider2D>().bounds.extents.y;
     }
 
     private void OnEnable()
     {
-        movement = playerController.PlayerControls.Movement;
-        movement.Enable();
-
-        playerController.PlayerControls.Jump.performed += DoJump;
-        playerController.PlayerControls.Jump.Enable();
+        playerController.Enable();
     }
     private void OnDisable()
     {
-        movement.Disable();
-        playerController.PlayerControls.Jump.Disable();
+        playerController.Disable();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
-        if (movement.ReadValue<Vector2>().x != 0)
+        if (!grounded && rb.IsTouchingLayers(groundLayer))
         {
-            if (movement.ReadValue<Vector2>().x < 0)
-            {
-                rb.velocity = new Vector2(-playerVelocity, rb.velocity.y);
-            }
-            if (movement.ReadValue<Vector2>().x > 0)
-            {
-                rb.velocity = new Vector2(playerVelocity, rb.velocity.y);
-            }
+            grounded = IsGrounded();
         }
-        else
+        float moveX = movementInput.x * playerVelocity * Time.deltaTime;
+        float moveY = rb.velocity.y;
+        if (canFly)
         {
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            moveY = movementInput.y * playerVelocity * Time.deltaTime;
         }
-
-        if (movement.ReadValue<Vector2>().y != 0)
-        { 
-            if (canFly)
-            {
-                if (movement.ReadValue<Vector2>().y < 0)
-                {
-                    rb.velocity = new Vector2(rb.velocity.x, -playerVelocity);
-                }
-                if (movement.ReadValue<Vector2>().y > 0)
-                {
-                    rb.velocity = new Vector2(rb.velocity.x, playerVelocity);
-                }
-            }
-        }
-        else 
+        rb.velocity = new Vector2(moveX, moveY);
+    }
+    public void Jump(InputAction.CallbackContext ctx)
+    {
+        if(grounded && ctx.performed)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y); 
+            
+            rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
+            grounded = false;
         }
+        //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
 
     }
-
-    public void DoJump(InputAction.CallbackContext obj)
+    public void MovementInput(InputAction.CallbackContext ctx)
     {
-        Debug.Log("JUMPED");
-        rb.AddForce(new Vector2(0f, 1000f * jumpMultiplier));
+        movementInput = ctx.ReadValue<Vector2>();
+    }
+    private bool IsGrounded()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, height + 0.1f, groundLayer);
+        return hit;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        GameObject hitObject = collision.gameObject;
+        if(hitObject.layer == groundLayer)
+        {
+            if(!grounded)
+            {
+                float playerLowPoint = transform.position.y + height;
+                float objectHighPoint = hitObject.transform.position.y - collision.bounds.extents.y;
+                Debug.Log(playerLowPoint);
+                Debug.Log(objectHighPoint);
+                if (playerLowPoint > objectHighPoint)
+                {
+                    grounded = true;
+
+                }
+            }
+            
+        }
+        
     }
 }
