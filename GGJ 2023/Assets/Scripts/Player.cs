@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour
 // can i edit this? can you see it?
 
     public bool canFly = false;
+    public GameObject healthb;
+    public TMPro.TMP_Text text;
     public int groundLayer = 3;
 
     public float playerVelocity = 1;
@@ -23,8 +26,14 @@ public class Player : MonoBehaviour
     public int currenthealth;
     public Healthbar healthbar;
     public Pulse pulse;
+    public Image deathscreen;
     private float jumpCounter = 0;
     private float height;
+    public bool fading;
+    private float fade_dur = 1.0f;
+    private float lerp_start = 0;
+    public TMPro.TMP_Text deadtext1;
+    public TMPro.TMP_Text deadtext2;
     private Vector2 movementInput = Vector2.zero;
     [SerializeField] private bool grounded = false;
 
@@ -36,6 +45,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         height = GetComponent<BoxCollider2D>().bounds.extents.y;
         animator = GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<CharacterAnimations>();
+        fading = false;
     }
 
     private void OnEnable()
@@ -47,50 +57,86 @@ public class Player : MonoBehaviour
         playerController.Disable();
     }
 
+    IEnumerator LerpFunction(Color endValue, float duration)
+    {
+        text.gameObject.SetActive(false);
+        healthb.gameObject.SetActive(false);
+        float time = 0;
+        Color startValue = deathscreen.color;
+        while (time < duration)
+        {
+            deathscreen.color = Color.Lerp(startValue, endValue, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        deathscreen.color = endValue;
+        deadtext1.gameObject.SetActive(true);
+        deadtext2.gameObject.SetActive(true);
+        fading = false;
+
+    }
+
     private void Update()
     {
-        animator.SetInput(Mathf.Abs(movementInput.x));
-        int frame = 0;
-
-        if (movementInput.x != 0)
+        if (currenthealth <= 0 && fading == true)
         {
-            if (movementInput.x > 0)
-            {
-                GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = false;
-            }
-            else if (movementInput.x < 0)
-            {
-                GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = true;
-            }
+            StartCoroutine(LerpFunction(new Color(deathscreen.color.r,deathscreen.color.g,deathscreen.color.b,0.7f),1));
         }
         else
         {
-            if (grounded)
+            if(currenthealth <= 0)
             {
-                sfxManager.sfxInstance.audio.Play();
+                fading = true;
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    Application.LoadLevel(Application.loadedLevel);
+                }
             }
-        }
-        if(!grounded)
-        {
-            if (rb.velocity.y > 0)
-            {
-                frame = 3;
-            }
-            else if (rb.velocity.y < 0)
-            {
-                frame = 4;
-                
-            }
-        }
-        else
-        {
-            frame = 0;
-        }
-        animator.CurrentAnim = frame;
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            TakeDamage(20);
+
+            animator.SetInput(Mathf.Abs(movementInput.x));
+            int frame = 0;
+
+            if (movementInput.x != 0)
+            {
+                if (movementInput.x > 0)
+                {
+                    GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = false;
+                }
+                else if (movementInput.x < 0)
+                {
+                    GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = true;
+                }
+            }
+            else
+            {
+                if (grounded)
+                {
+                    sfxManager.sfxInstance.audio.Play();
+                }
+            }
+            if (!grounded)
+            {
+                if (rb.velocity.y > 0)
+                {
+                    frame = 3;
+                }
+                else if (rb.velocity.y < 0)
+                {
+                    frame = 4;
+
+                }
+            }
+            else
+            {
+                frame = 0;
+            }
+            animator.CurrentAnim = frame;
+
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                TakeDamage(20);
+            }
         }
     }
 
