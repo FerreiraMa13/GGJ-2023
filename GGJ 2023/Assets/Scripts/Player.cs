@@ -24,8 +24,6 @@ public class Player : MonoBehaviour
     public float jumpMultiplier = 1;
     public float BaseJumpForce = 1000f;
     public float maxJumpCounter = 1;
-    public int maxhealth = 100;
-    public int currenthealth;
     public Healthbar healthbar;
     public Pulse pulse;
     public Image deathscreen;
@@ -45,11 +43,6 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         playerController = new PlayerController();
-        currenthealth = maxhealth;
-        if(healthbar)
-        {
-            healthbar.SetMaxHealth(maxhealth);
-        }
         rb = GetComponent<Rigidbody2D>();
         foreach (var comp in GetComponents<Collider2D>())
         {
@@ -95,13 +88,13 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (currenthealth <= 0 && fading == true)
+        if (health.Health <= 0 && fading == true)
         {
             StartCoroutine(LerpFunction(new Color(deathscreen.color.r,deathscreen.color.g,deathscreen.color.b,0.7f),1));
         }
         else
         {
-            if(currenthealth <= 0)
+            if(health.Health <= 0)
             {
                 fading = true;
                 if (Input.GetKeyDown(KeyCode.R))
@@ -242,9 +235,9 @@ public class Player : MonoBehaviour
     }
     void TakeDamage(int damage)
     {
-        currenthealth -= damage;
+        health.Health -= damage;
         pulse.pulse();
-        healthbar.SetHealth(currenthealth);
+        healthbar.SetHealth(health.Health);
         
     }
 

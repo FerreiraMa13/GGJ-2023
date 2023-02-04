@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called before the first frame updatedis
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -8,7 +8,7 @@ public class Pulse : MonoBehaviour
     Vector3 end = new Vector3(2.0f, 2.0f, 2.0f);
     float speed = 5f;
     float duration = 0.5f;
-    public Player health;
+    public health Health;
     bool repeat = false;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class Pulse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health.currenthealth < 25)
+        if (health.Health < 25)
         {
             repeat = true;
         }
