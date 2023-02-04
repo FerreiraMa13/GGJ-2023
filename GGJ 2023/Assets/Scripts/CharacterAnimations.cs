@@ -9,6 +9,7 @@ public class CharacterAnimations : MonoBehaviour
     private CharacterHash hash;
     public int CurrentAnim;
     private float player_input = 0;
+    private int attack_input = -1;
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -25,25 +26,21 @@ public class CharacterAnimations : MonoBehaviour
     private void InfoDump()
     {
         // Animation Order:
-        // Idle = 0
-        // Run = 1
-        // Attack = 2
+        // Disable Falling = 0
+        // Attack_2_No_Movement = 1
+        // Attack_2_With_Movement = 2
         // Jump = 3
-        // Falling = 4
+        // Enable Falling = 4
     }
 
     // Update is called once per frame
     void Update()
     {
         anim?.SetFloat(hash.runBool, player_input);
+        anim?.SetFloat(hash.attackBool, attack_input);
         switch (CurrentAnim)
         {
             case 0:
-                anim?.SetBool(hash.fallingBool, false);
-                break;
-            case 2:  
-                //anim?.SetBool(hash.idleAttackBool, true);
-                anim?.SetBool(hash.jumpBool, false);
                 anim?.SetBool(hash.fallingBool, false);
                 break;
             case 3:  
