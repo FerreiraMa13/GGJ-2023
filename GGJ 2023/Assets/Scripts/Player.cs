@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     public Healthbar healthbar;
     public Pulse pulse;
     private float jumpCounter = 0;
-
     private float height;
     private Vector2 movementInput = Vector2.zero;
     [SerializeField] private bool grounded = false;
@@ -61,6 +60,13 @@ public class Player : MonoBehaviour
             else if (movementInput.x < 0)
             {
                 GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        else
+        {
+            if (grounded)
+            {
+                sfxManager.sfxInstance.audio.Play();
             }
         }
         if(!grounded)
@@ -126,6 +132,7 @@ public class Player : MonoBehaviour
                 {
                     jumpCounter = 0;
                     grounded = true;
+                    sfxManager.sfxInstance.audio.PlayOneShot(sfxManager.sfxInstance.land);
                 }
             }
             
