@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private InputAction movement;
     private Rigidbody2D rb;
     private GameObject gameManager;
+    private CharacterAnimations animator;
     private Collider2D collision_collider;
 
     public bool canFly = false;
@@ -18,8 +19,11 @@ public class Player : MonoBehaviour
     public float jumpMultiplier = 1;
     public float BaseJumpForce = 1000f;
     public float maxJumpCounter = 1;
+    public int maxhealth = 100;
+    public int currenthealth;
+    public Healthbar healthbar;
+    public Pulse pulse;
     private float jumpCounter = 0;
-
     private float height;
     private Vector2 movementInput = Vector2.zero;
     [SerializeField] private bool grounded = false;
@@ -27,6 +31,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         playerController = new PlayerController();
+        currenthealth = maxhealth;
+        healthbar.SetMaxHealth(maxhealth);
         rb = GetComponent<Rigidbody2D>();
         foreach (var comp in GetComponents<Collider2D>())
         {
@@ -38,6 +44,7 @@ public class Player : MonoBehaviour
         }
         collision_collider = GetComponent<BoxCollider2D>();
         height = GetComponent<BoxCollider2D>().bounds.extents.y;
+        animator = GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<CharacterAnimations>();
     }
 
     private void OnEnable()
@@ -49,14 +56,63 @@ public class Player : MonoBehaviour
         playerController.Disable();
     }
 
+    private void Update()
+    {
+        animator.SetInput(Mathf.Abs(movementInput.x));
+        int frame = 0;
+
+        if (movementInput.x != 0)
+        {
+            if (movementInput.x > 0)
+            {
+                GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else if (movementInput.x < 0)
+            {
+                GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        else
+        {
+            if (grounded)
+            {
+                sfxManager.sfxInstance.audio.Play();
+            }
+        }
+        if(!grounded)
+        {
+            if (rb.velocity.y > 0)
+            {
+                frame = 3;
+            }
+            else if (rb.velocity.y < 0)
+            {
+                frame = 4;
+                
+            }
+        }
+        else
+        {
+            frame = 0;
+        }
+        animator.CurrentAnim = frame;
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            TakeDamage(20);
+        }
+    }
+
     void FixedUpdate()
     {
+        
         float moveX = movementInput.x * playerVelocity * Time.deltaTime;
         float moveY = rb.velocity.y;
         if (canFly)
         {
             moveY = movementInput.y * playerVelocity * Time.deltaTime;
         }
+
         rb.velocity = new Vector2(moveX, moveY);
     }
     public void Jump(InputAction.CallbackContext ctx)
@@ -86,10 +142,19 @@ public class Player : MonoBehaviour
                 {
                     jumpCounter = 0;
                     grounded = true;
+                    sfxManager.sfxInstance.audio.PlayOneShot(sfxManager.sfxInstance.land);
                 }
             }
             
         }
+        
+    }
+
+    void TakeDamage(int damage)
+    {
+        currenthealth -= damage;
+        pulse.pulse();
+        healthbar.SetHealth(currenthealth);
         
     }
 
