@@ -80,6 +80,11 @@ public class Player : MonoBehaviour
             frame = 0;
         }
         animator.CurrentAnim = frame;
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            TakeDamage(20);
+        }
     }
 
     void FixedUpdate()
@@ -126,15 +131,6 @@ public class Player : MonoBehaviour
             
         }
         
-    }
-
-    //HEALTH DEBUG 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            TakeDamage(20);
-        }
     }
 
     void TakeDamage(int damage)

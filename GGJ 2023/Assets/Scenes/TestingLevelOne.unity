@@ -156,7 +156,7 @@ Transform:
   - {fileID: 940616851}
   - {fileID: 931686864}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &14938669
 GameObject:
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 14938671}
   - component: {fileID: 14938670}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_18 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 15867594}
   - component: {fileID: 15867593}
   - component: {fileID: 15867592}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 18836535}
   - component: {fileID: 18836534}
   - component: {fileID: 18836533}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 23713507}
   - component: {fileID: 23713509}
   - component: {fileID: 23713508}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +670,7 @@ GameObject:
   - component: {fileID: 43295593}
   - component: {fileID: 43295592}
   - component: {fileID: 43295591}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 66866338}
   - component: {fileID: 66866337}
   - component: {fileID: 66866336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 70819462}
   - component: {fileID: 70819461}
   - component: {fileID: 70819460}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1003,7 @@ GameObject:
   - component: {fileID: 116477798}
   - component: {fileID: 116477797}
   - component: {fileID: 116477796}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_17 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1114,7 +1114,7 @@ GameObject:
   - component: {fileID: 117939807}
   - component: {fileID: 117939806}
   - component: {fileID: 117939805}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1225,7 +1225,7 @@ GameObject:
   - component: {fileID: 138298162}
   - component: {fileID: 138298161}
   - component: {fileID: 138298163}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1272,7 +1272,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 38011859, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1336,7 +1336,7 @@ GameObject:
   - component: {fileID: 147515564}
   - component: {fileID: 147515563}
   - component: {fileID: 147515562}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1447,7 +1447,7 @@ GameObject:
   - component: {fileID: 152711156}
   - component: {fileID: 152711158}
   - component: {fileID: 152711157}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1558,7 @@ GameObject:
   - component: {fileID: 152734328}
   - component: {fileID: 152734327}
   - component: {fileID: 152734326}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1578,7 +1578,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.31964707, y: 0}
+  m_Offset: {x: 0.31964707, y: 0.7560303}
   m_SpriteTilingProperty:
     border: {x: 0.9499999, y: 0.44999996, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1589,7 +1589,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.190706, y: 5.02}
+  m_Size: {x: 4.190706, y: 3.5079398}
   m_EdgeRadius: 0
 --- !u!212 &152734327
 SpriteRenderer:
@@ -1669,7 +1669,7 @@ GameObject:
   - component: {fileID: 155227088}
   - component: {fileID: 155227087}
   - component: {fileID: 155227086}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1780,7 +1780,7 @@ GameObject:
   - component: {fileID: 166976622}
   - component: {fileID: 166976621}
   - component: {fileID: 166976620}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - FloatingPlatforms_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1891,7 +1891,7 @@ GameObject:
   - component: {fileID: 172435902}
   - component: {fileID: 172435904}
   - component: {fileID: 172435903}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2002,7 +2002,7 @@ GameObject:
   - component: {fileID: 178809711}
   - component: {fileID: 178809713}
   - component: {fileID: 178809712}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2113,7 +2113,7 @@ GameObject:
   - component: {fileID: 187824323}
   - component: {fileID: 187824325}
   - component: {fileID: 187824324}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2224,7 +2224,7 @@ GameObject:
   - component: {fileID: 211186232}
   - component: {fileID: 211186231}
   - component: {fileID: 211186233}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215239042}
   - component: {fileID: 215239043}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (74)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2503,7 +2503,7 @@ GameObject:
   - component: {fileID: 232926249}
   - component: {fileID: 232926248}
   - component: {fileID: 232926247}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2576,7 +2576,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2614,7 +2614,7 @@ GameObject:
   - component: {fileID: 235667658}
   - component: {fileID: 235667657}
   - component: {fileID: 235667656}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2687,7 +2687,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2725,7 +2725,7 @@ GameObject:
   - component: {fileID: 236096297}
   - component: {fileID: 236096296}
   - component: {fileID: 236096295}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2920,7 +2920,7 @@ GameObject:
   - component: {fileID: 249259424}
   - component: {fileID: 249259426}
   - component: {fileID: 249259425}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3115,7 +3115,7 @@ GameObject:
   - component: {fileID: 274949109}
   - component: {fileID: 274949108}
   - component: {fileID: 274949107}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3188,7 +3188,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3226,7 +3226,7 @@ GameObject:
   - component: {fileID: 276026545}
   - component: {fileID: 276026544}
   - component: {fileID: 276026543}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3337,7 +3337,7 @@ GameObject:
   - component: {fileID: 287740042}
   - component: {fileID: 287740041}
   - component: {fileID: 287740040}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3410,7 +3410,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3448,7 +3448,7 @@ GameObject:
   - component: {fileID: 294863925}
   - component: {fileID: 294863924}
   - component: {fileID: 294863923}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3559,7 +3559,7 @@ GameObject:
   - component: {fileID: 302333582}
   - component: {fileID: 302333581}
   - component: {fileID: 302333580}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3670,7 +3670,7 @@ GameObject:
   - component: {fileID: 309193448}
   - component: {fileID: 309193450}
   - component: {fileID: 309193449}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3781,7 +3781,7 @@ GameObject:
   - component: {fileID: 319637842}
   - component: {fileID: 319637841}
   - component: {fileID: 319637840}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3914,7 +3914,7 @@ Transform:
   - {fileID: 1735178091}
   - {fileID: 658489905}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &338348435
 GameObject:
@@ -3927,7 +3927,7 @@ GameObject:
   - component: {fileID: 338348438}
   - component: {fileID: 338348437}
   - component: {fileID: 338348436}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4038,7 +4038,7 @@ GameObject:
   - component: {fileID: 343124855}
   - component: {fileID: 343124857}
   - component: {fileID: 343124856}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4233,7 +4233,7 @@ GameObject:
   - component: {fileID: 351333169}
   - component: {fileID: 351333168}
   - component: {fileID: 351333167}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4344,7 +4344,7 @@ GameObject:
   - component: {fileID: 359335392}
   - component: {fileID: 359335391}
   - component: {fileID: 359335390}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4455,7 +4455,7 @@ GameObject:
   - component: {fileID: 360498119}
   - component: {fileID: 360498118}
   - component: {fileID: 360498117}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4566,7 +4566,7 @@ GameObject:
   - component: {fileID: 365809256}
   - component: {fileID: 365809255}
   - component: {fileID: 365809254}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4677,7 +4677,7 @@ GameObject:
   - component: {fileID: 384135009}
   - component: {fileID: 384135008}
   - component: {fileID: 384135007}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4788,7 +4788,7 @@ GameObject:
   - component: {fileID: 396019177}
   - component: {fileID: 396019179}
   - component: {fileID: 396019178}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5067,7 +5067,7 @@ GameObject:
   - component: {fileID: 415839249}
   - component: {fileID: 415839248}
   - component: {fileID: 415839247}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5262,7 +5262,7 @@ GameObject:
   - component: {fileID: 472879981}
   - component: {fileID: 472879980}
   - component: {fileID: 472879979}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5457,7 +5457,7 @@ GameObject:
   - component: {fileID: 495634931}
   - component: {fileID: 495634930}
   - component: {fileID: 495634929}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5568,7 +5568,7 @@ GameObject:
   - component: {fileID: 499798965}
   - component: {fileID: 499798964}
   - component: {fileID: 499798963}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_18 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5679,7 +5679,7 @@ GameObject:
   - component: {fileID: 510825635}
   - component: {fileID: 510825634}
   - component: {fileID: 510825633}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_18 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5874,7 +5874,7 @@ GameObject:
   - component: {fileID: 520918790}
   - component: {fileID: 520918792}
   - component: {fileID: 520918791}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5983,7 +5983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 532949384}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6443,7 +6443,7 @@ GameObject:
   - component: {fileID: 583178922}
   - component: {fileID: 583178924}
   - component: {fileID: 583178923}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (72)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6554,7 +6554,7 @@ GameObject:
   - component: {fileID: 598691263}
   - component: {fileID: 598691265}
   - component: {fileID: 598691264}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6665,7 +6665,7 @@ GameObject:
   - component: {fileID: 600107456}
   - component: {fileID: 600107455}
   - component: {fileID: 600107454}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6860,7 +6860,7 @@ GameObject:
   - component: {fileID: 629477324}
   - component: {fileID: 629477323}
   - component: {fileID: 629477322}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7188,7 +7188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 668631354}
   - component: {fileID: 668631353}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7273,7 +7273,7 @@ GameObject:
   - component: {fileID: 671697244}
   - component: {fileID: 671697243}
   - component: {fileID: 671697242}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7384,7 +7384,7 @@ GameObject:
   - component: {fileID: 674868688}
   - component: {fileID: 674868687}
   - component: {fileID: 674868686}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7495,7 +7495,7 @@ GameObject:
   - component: {fileID: 685929843}
   - component: {fileID: 685929842}
   - component: {fileID: 685929841}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7606,7 +7606,7 @@ GameObject:
   - component: {fileID: 722457466}
   - component: {fileID: 722457465}
   - component: {fileID: 722457464}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7717,7 +7717,7 @@ GameObject:
   - component: {fileID: 723209870}
   - component: {fileID: 723209869}
   - component: {fileID: 723209868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7996,7 +7996,7 @@ GameObject:
   - component: {fileID: 744001536}
   - component: {fileID: 744001535}
   - component: {fileID: 744001534}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8069,7 +8069,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8107,7 +8107,7 @@ GameObject:
   - component: {fileID: 751182226}
   - component: {fileID: 751182225}
   - component: {fileID: 751182224}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8218,7 +8218,7 @@ GameObject:
   - component: {fileID: 771109755}
   - component: {fileID: 771109754}
   - component: {fileID: 771109753}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8413,7 +8413,7 @@ GameObject:
   - component: {fileID: 777968305}
   - component: {fileID: 777968307}
   - component: {fileID: 777968306}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8524,7 +8524,7 @@ GameObject:
   - component: {fileID: 779511735}
   - component: {fileID: 779511734}
   - component: {fileID: 779511733}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8719,7 +8719,7 @@ GameObject:
   - component: {fileID: 800001455}
   - component: {fileID: 800001454}
   - component: {fileID: 800001453}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8830,7 +8830,7 @@ GameObject:
   - component: {fileID: 811115941}
   - component: {fileID: 811115940}
   - component: {fileID: 811115939}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13839,7 +13839,7 @@ GameObject:
   - component: {fileID: 822797708}
   - component: {fileID: 822797707}
   - component: {fileID: 822797706}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13912,7 +13912,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13950,7 +13950,7 @@ GameObject:
   - component: {fileID: 829962212}
   - component: {fileID: 829962214}
   - component: {fileID: 829962213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14061,7 +14061,7 @@ GameObject:
   - component: {fileID: 831736062}
   - component: {fileID: 831736061}
   - component: {fileID: 831736060}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14256,7 +14256,7 @@ GameObject:
   - component: {fileID: 848827676}
   - component: {fileID: 848827675}
   - component: {fileID: 848827674}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19181,7 +19181,7 @@ GameObject:
   - component: {fileID: 854136139}
   - component: {fileID: 854136141}
   - component: {fileID: 854136140}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19292,7 +19292,7 @@ GameObject:
   - component: {fileID: 881879312}
   - component: {fileID: 881879311}
   - component: {fileID: 881879310}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19402,7 +19402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 906232969}
   - component: {fileID: 906232970}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (73)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19487,7 +19487,7 @@ GameObject:
   - component: {fileID: 909217534}
   - component: {fileID: 909217536}
   - component: {fileID: 909217535}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19598,7 +19598,7 @@ GameObject:
   - component: {fileID: 918170690}
   - component: {fileID: 918170692}
   - component: {fileID: 918170691}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19793,7 +19793,7 @@ GameObject:
   - component: {fileID: 923946201}
   - component: {fileID: 923946200}
   - component: {fileID: 923946199}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19866,7 +19866,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -19904,7 +19904,7 @@ GameObject:
   - component: {fileID: 927743652}
   - component: {fileID: 927743654}
   - component: {fileID: 927743653}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29727,7 +29727,7 @@ GameObject:
   - component: {fileID: 946367563}
   - component: {fileID: 946367562}
   - component: {fileID: 946367561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29838,7 +29838,7 @@ GameObject:
   - component: {fileID: 948450009}
   - component: {fileID: 948450011}
   - component: {fileID: 948450010}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29949,7 +29949,7 @@ GameObject:
   - component: {fileID: 953561439}
   - component: {fileID: 953561438}
   - component: {fileID: 953561440}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_17 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30060,7 +30060,7 @@ GameObject:
   - component: {fileID: 955386429}
   - component: {fileID: 955386428}
   - component: {fileID: 955386427}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30171,7 +30171,7 @@ GameObject:
   - component: {fileID: 960684753}
   - component: {fileID: 960684755}
   - component: {fileID: 960684754}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30282,7 +30282,7 @@ GameObject:
   - component: {fileID: 966433140}
   - component: {fileID: 966433139}
   - component: {fileID: 966433138}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30393,7 +30393,7 @@ GameObject:
   - component: {fileID: 969309315}
   - component: {fileID: 969309314}
   - component: {fileID: 969309313}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30504,7 +30504,7 @@ GameObject:
   - component: {fileID: 973703814}
   - component: {fileID: 973703816}
   - component: {fileID: 973703815}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30615,7 +30615,7 @@ GameObject:
   - component: {fileID: 984843324}
   - component: {fileID: 984843323}
   - component: {fileID: 984843322}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30688,7 +30688,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30726,7 +30726,7 @@ GameObject:
   - component: {fileID: 991293724}
   - component: {fileID: 991293726}
   - component: {fileID: 991293725}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30837,7 +30837,7 @@ GameObject:
   - component: {fileID: 994380540}
   - component: {fileID: 994380539}
   - component: {fileID: 994380538}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30948,7 +30948,7 @@ GameObject:
   - component: {fileID: 998661554}
   - component: {fileID: 998661553}
   - component: {fileID: 998661552}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31059,7 +31059,7 @@ GameObject:
   - component: {fileID: 1002975583}
   - component: {fileID: 1002975585}
   - component: {fileID: 1002975584}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31170,7 +31170,7 @@ GameObject:
   - component: {fileID: 1013310460}
   - component: {fileID: 1013310459}
   - component: {fileID: 1013310458}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31281,7 +31281,7 @@ GameObject:
   - component: {fileID: 1014294387}
   - component: {fileID: 1014294386}
   - component: {fileID: 1014294388}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - FloatingPlatforms_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31392,7 +31392,7 @@ GameObject:
   - component: {fileID: 1017424593}
   - component: {fileID: 1017424592}
   - component: {fileID: 1017424591}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31587,7 +31587,7 @@ GameObject:
   - component: {fileID: 1032559620}
   - component: {fileID: 1032559619}
   - component: {fileID: 1032559618}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_46 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31698,7 +31698,7 @@ GameObject:
   - component: {fileID: 1038813498}
   - component: {fileID: 1038813497}
   - component: {fileID: 1038813496}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_8 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31809,7 +31809,7 @@ GameObject:
   - component: {fileID: 1048049408}
   - component: {fileID: 1048049407}
   - component: {fileID: 1048049406}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31829,7 +31829,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.75286245}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.44999996, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -31840,7 +31840,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.06, y: 4.9900002}
+  m_Size: {x: 5.06, y: 3.4842749}
   m_EdgeRadius: 0
 --- !u!212 &1048049407
 SpriteRenderer:
@@ -31920,7 +31920,7 @@ GameObject:
   - component: {fileID: 1048629670}
   - component: {fileID: 1048629669}
   - component: {fileID: 1048629668}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32031,7 +32031,7 @@ GameObject:
   - component: {fileID: 1057938010}
   - component: {fileID: 1057938009}
   - component: {fileID: 1057938008}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32142,7 +32142,7 @@ GameObject:
   - component: {fileID: 1071524151}
   - component: {fileID: 1071524150}
   - component: {fileID: 1071524149}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32253,7 +32253,7 @@ GameObject:
   - component: {fileID: 1074506133}
   - component: {fileID: 1074506135}
   - component: {fileID: 1074506134}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32364,7 +32364,7 @@ GameObject:
   - component: {fileID: 1099102250}
   - component: {fileID: 1099102249}
   - component: {fileID: 1099102248}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32559,7 +32559,7 @@ GameObject:
   - component: {fileID: 1104505252}
   - component: {fileID: 1104505254}
   - component: {fileID: 1104505253}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32754,7 +32754,7 @@ GameObject:
   - component: {fileID: 1121640577}
   - component: {fileID: 1121640579}
   - component: {fileID: 1121640578}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32865,7 +32865,7 @@ GameObject:
   - component: {fileID: 1126680949}
   - component: {fileID: 1126680948}
   - component: {fileID: 1126680947}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32976,7 +32976,7 @@ GameObject:
   - component: {fileID: 1129860926}
   - component: {fileID: 1129860925}
   - component: {fileID: 1129860924}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_19 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33087,7 +33087,7 @@ GameObject:
   - component: {fileID: 1141550929}
   - component: {fileID: 1141550928}
   - component: {fileID: 1141550927}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33282,7 +33282,7 @@ GameObject:
   - component: {fileID: 1171283683}
   - component: {fileID: 1171283682}
   - component: {fileID: 1171283681}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33477,7 +33477,7 @@ GameObject:
   - component: {fileID: 1191549313}
   - component: {fileID: 1191549312}
   - component: {fileID: 1191549311}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_19 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33588,7 +33588,7 @@ GameObject:
   - component: {fileID: 1210601731}
   - component: {fileID: 1210601730}
   - component: {fileID: 1210601729}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33699,7 +33699,7 @@ GameObject:
   - component: {fileID: 1214677150}
   - component: {fileID: 1214677149}
   - component: {fileID: 1214677148}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33810,7 +33810,7 @@ GameObject:
   - component: {fileID: 1231477491}
   - component: {fileID: 1231477490}
   - component: {fileID: 1231477489}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34005,7 +34005,7 @@ GameObject:
   - component: {fileID: 1249881643}
   - component: {fileID: 1249881642}
   - component: {fileID: 1249881641}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34078,7 +34078,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -34116,7 +34116,7 @@ GameObject:
   - component: {fileID: 1252599968}
   - component: {fileID: 1252599967}
   - component: {fileID: 1252599966}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34227,7 +34227,7 @@ GameObject:
   - component: {fileID: 1255158266}
   - component: {fileID: 1255158268}
   - component: {fileID: 1255158267}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34338,7 +34338,7 @@ GameObject:
   - component: {fileID: 1255575078}
   - component: {fileID: 1255575077}
   - component: {fileID: 1255575076}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34449,7 +34449,7 @@ GameObject:
   - component: {fileID: 1264558886}
   - component: {fileID: 1264558885}
   - component: {fileID: 1264558884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34560,7 +34560,7 @@ GameObject:
   - component: {fileID: 1271576745}
   - component: {fileID: 1271576744}
   - component: {fileID: 1271576746}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34671,7 +34671,7 @@ GameObject:
   - component: {fileID: 1275246175}
   - component: {fileID: 1275246177}
   - component: {fileID: 1275246176}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34782,7 +34782,7 @@ GameObject:
   - component: {fileID: 1275276442}
   - component: {fileID: 1275276444}
   - component: {fileID: 1275276443}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34977,7 +34977,7 @@ GameObject:
   - component: {fileID: 1297149653}
   - component: {fileID: 1297149652}
   - component: {fileID: 1297149651}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35088,7 +35088,7 @@ GameObject:
   - component: {fileID: 1297541347}
   - component: {fileID: 1297541346}
   - component: {fileID: 1297541345}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35199,7 +35199,7 @@ GameObject:
   - component: {fileID: 1298384854}
   - component: {fileID: 1298384856}
   - component: {fileID: 1298384855}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35394,7 +35394,7 @@ GameObject:
   - component: {fileID: 1324799899}
   - component: {fileID: 1324799898}
   - component: {fileID: 1324799897}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35841,7 +35841,7 @@ GameObject:
   - component: {fileID: 1349153509}
   - component: {fileID: 1349153508}
   - component: {fileID: 1349153507}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35952,7 +35952,7 @@ GameObject:
   - component: {fileID: 1364381971}
   - component: {fileID: 1364381970}
   - component: {fileID: 1364381969}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36128,13 +36128,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370070866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.4, y: -11.8, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 822960560929991021}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380454413
 GameObject:
@@ -36567,7 +36567,7 @@ GameObject:
   - component: {fileID: 1400251449}
   - component: {fileID: 1400251448}
   - component: {fileID: 1400251447}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36762,7 +36762,7 @@ GameObject:
   - component: {fileID: 1428238193}
   - component: {fileID: 1428238192}
   - component: {fileID: 1428238191}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36782,7 +36782,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3516624, y: 0}
+  m_Offset: {x: -0.3516624, y: 0.7496953}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.44999996, z: 0.99999994, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -36793,7 +36793,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.246675, y: 4.9900002}
+  m_Size: {x: 4.246675, y: 3.4906092}
   m_EdgeRadius: 0
 --- !u!212 &1428238192
 SpriteRenderer:
@@ -36873,7 +36873,7 @@ GameObject:
   - component: {fileID: 1431456080}
   - component: {fileID: 1431456079}
   - component: {fileID: 1431456078}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37068,7 +37068,7 @@ GameObject:
   - component: {fileID: 1446893472}
   - component: {fileID: 1446893474}
   - component: {fileID: 1446893473}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37179,7 +37179,7 @@ GameObject:
   - component: {fileID: 1450812199}
   - component: {fileID: 1450812198}
   - component: {fileID: 1450812197}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37252,7 +37252,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1051580630, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -37290,7 +37290,7 @@ GameObject:
   - component: {fileID: 1451952645}
   - component: {fileID: 1451952647}
   - component: {fileID: 1451952646}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37401,7 +37401,7 @@ GameObject:
   - component: {fileID: 1455116764}
   - component: {fileID: 1455116763}
   - component: {fileID: 1455116762}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_6 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37512,7 +37512,7 @@ GameObject:
   - component: {fileID: 1455454890}
   - component: {fileID: 1455454892}
   - component: {fileID: 1455454891}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37623,7 +37623,7 @@ GameObject:
   - component: {fileID: 1459688626}
   - component: {fileID: 1459688625}
   - component: {fileID: 1459688624}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37734,7 +37734,7 @@ GameObject:
   - component: {fileID: 1476845834}
   - component: {fileID: 1476845833}
   - component: {fileID: 1476845832}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37845,7 +37845,7 @@ GameObject:
   - component: {fileID: 1477804384}
   - component: {fileID: 1477804386}
   - component: {fileID: 1477804385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38124,7 +38124,7 @@ GameObject:
   - component: {fileID: 1551323182}
   - component: {fileID: 1551323181}
   - component: {fileID: 1551323180}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38235,7 +38235,7 @@ GameObject:
   - component: {fileID: 1554558382}
   - component: {fileID: 1554558384}
   - component: {fileID: 1554558383}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38346,7 +38346,7 @@ GameObject:
   - component: {fileID: 1565322486}
   - component: {fileID: 1565322485}
   - component: {fileID: 1565322484}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38457,7 +38457,7 @@ GameObject:
   - component: {fileID: 1571708657}
   - component: {fileID: 1571708656}
   - component: {fileID: 1571708655}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38652,7 +38652,7 @@ GameObject:
   - component: {fileID: 1582742222}
   - component: {fileID: 1582742221}
   - component: {fileID: 1582742220}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38763,7 +38763,7 @@ GameObject:
   - component: {fileID: 1599585092}
   - component: {fileID: 1599585091}
   - component: {fileID: 1599585093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39042,7 +39042,7 @@ GameObject:
   - component: {fileID: 1634582336}
   - component: {fileID: 1634582335}
   - component: {fileID: 1634582334}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39153,7 +39153,7 @@ GameObject:
   - component: {fileID: 1636906003}
   - component: {fileID: 1636906005}
   - component: {fileID: 1636906004}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39348,7 +39348,7 @@ GameObject:
   - component: {fileID: 1660023813}
   - component: {fileID: 1660023812}
   - component: {fileID: 1660023811}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39627,7 +39627,7 @@ GameObject:
   - component: {fileID: 1683385903}
   - component: {fileID: 1683385902}
   - component: {fileID: 1683385901}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_19 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39822,7 +39822,7 @@ GameObject:
   - component: {fileID: 1692029307}
   - component: {fileID: 1692029309}
   - component: {fileID: 1692029308}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39933,7 +39933,7 @@ GameObject:
   - component: {fileID: 1714492575}
   - component: {fileID: 1714492574}
   - component: {fileID: 1714492576}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39980,7 +39980,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1246726471, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -40118,7 +40118,7 @@ GameObject:
   - component: {fileID: 1752089461}
   - component: {fileID: 1752089460}
   - component: {fileID: 1752089462}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_18 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40229,7 +40229,7 @@ GameObject:
   - component: {fileID: 1752708101}
   - component: {fileID: 1752708100}
   - component: {fileID: 1752708099}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40340,7 +40340,7 @@ GameObject:
   - component: {fileID: 1790313636}
   - component: {fileID: 1790313638}
   - component: {fileID: 1790313637}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40567,7 +40567,7 @@ GameObject:
   - component: {fileID: 1847971411}
   - component: {fileID: 1847971413}
   - component: {fileID: 1847971412}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40678,7 +40678,7 @@ GameObject:
   - component: {fileID: 1848815206}
   - component: {fileID: 1848815208}
   - component: {fileID: 1848815207}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40789,7 +40789,7 @@ GameObject:
   - component: {fileID: 1857657323}
   - component: {fileID: 1857657322}
   - component: {fileID: 1857657321}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40984,7 +40984,7 @@ GameObject:
   - component: {fileID: 1865082681}
   - component: {fileID: 1865082683}
   - component: {fileID: 1865082682}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41095,7 +41095,7 @@ GameObject:
   - component: {fileID: 1865296874}
   - component: {fileID: 1865296873}
   - component: {fileID: 1865296872}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41206,7 +41206,7 @@ GameObject:
   - component: {fileID: 1869166057}
   - component: {fileID: 1869166056}
   - component: {fileID: 1869166055}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41317,7 +41317,7 @@ GameObject:
   - component: {fileID: 1872306838}
   - component: {fileID: 1872306837}
   - component: {fileID: 1872306836}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41428,7 +41428,7 @@ GameObject:
   - component: {fileID: 1923162104}
   - component: {fileID: 1923162103}
   - component: {fileID: 1923162102}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_1 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41623,7 +41623,7 @@ GameObject:
   - component: {fileID: 1928567550}
   - component: {fileID: 1928567549}
   - component: {fileID: 1928567548}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_6 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41734,7 +41734,7 @@ GameObject:
   - component: {fileID: 1931248586}
   - component: {fileID: 1931248588}
   - component: {fileID: 1931248587}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41845,7 +41845,7 @@ GameObject:
   - component: {fileID: 1932269846}
   - component: {fileID: 1932269845}
   - component: {fileID: 1932269844}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41956,7 +41956,7 @@ GameObject:
   - component: {fileID: 1934591506}
   - component: {fileID: 1934591508}
   - component: {fileID: 1934591507}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42066,7 +42066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1940989095}
   - component: {fileID: 1940989094}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_18 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42151,7 +42151,7 @@ GameObject:
   - component: {fileID: 1941083355}
   - component: {fileID: 1941083354}
   - component: {fileID: 1941083353}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_7 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42262,7 +42262,7 @@ GameObject:
   - component: {fileID: 1944644927}
   - component: {fileID: 1944644929}
   - component: {fileID: 1944644928}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42373,7 +42373,7 @@ GameObject:
   - component: {fileID: 1951445625}
   - component: {fileID: 1951445624}
   - component: {fileID: 1951445623}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42568,7 +42568,7 @@ GameObject:
   - component: {fileID: 1958232884}
   - component: {fileID: 1958232883}
   - component: {fileID: 1958232882}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_8 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42679,7 +42679,7 @@ GameObject:
   - component: {fileID: 1965599435}
   - component: {fileID: 1965599434}
   - component: {fileID: 1965599433}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_5 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42790,7 +42790,7 @@ GameObject:
   - component: {fileID: 1971654803}
   - component: {fileID: 1971654802}
   - component: {fileID: 1971654804}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42837,7 +42837,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 38011859, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -42901,7 +42901,7 @@ GameObject:
   - component: {fileID: 1972931603}
   - component: {fileID: 1972931605}
   - component: {fileID: 1972931604}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43012,7 +43012,7 @@ GameObject:
   - component: {fileID: 1975009808}
   - component: {fileID: 1975009807}
   - component: {fileID: 1975009806}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43123,7 +43123,7 @@ GameObject:
   - component: {fileID: 1982493935}
   - component: {fileID: 1982493937}
   - component: {fileID: 1982493936}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43234,7 +43234,7 @@ GameObject:
   - component: {fileID: 1999808447}
   - component: {fileID: 1999808449}
   - component: {fileID: 1999808448}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43345,7 +43345,7 @@ GameObject:
   - component: {fileID: 2005378197}
   - component: {fileID: 2005378196}
   - component: {fileID: 2005378195}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43540,7 +43540,7 @@ GameObject:
   - component: {fileID: 2022379855}
   - component: {fileID: 2022379857}
   - component: {fileID: 2022379856}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43651,7 +43651,7 @@ GameObject:
   - component: {fileID: 2026035642}
   - component: {fileID: 2026035644}
   - component: {fileID: 2026035643}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43762,7 +43762,7 @@ GameObject:
   - component: {fileID: 2031517427}
   - component: {fileID: 2031517426}
   - component: {fileID: 2031517425}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44488,7 +44488,7 @@ GameObject:
   - component: {fileID: 2091527247}
   - component: {fileID: 2091527249}
   - component: {fileID: 2091527248}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_4 (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44588,3 +44588,992 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &822960560929991021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866568611720310878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.12, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3825530547763258125}
+  - {fileID: 1370070869}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2866568611720310878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 822960560929991021}
+  - component: {fileID: 4048699130613316819}
+  - component: {fileID: 4016814539328699877}
+  - component: {fileID: 6703504327627602123}
+  - component: {fileID: 8391907629375428025}
+  - component: {fileID: 6679976444015115647}
+  - component: {fileID: 6679976444015115644}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &3825530547763258124
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825530547763258126}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2074428446, guid: 2a5b6f088b31e2e4692e748c11ec2165, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.21, y: 0.38}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &3825530547763258125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825530547763258126}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 822960560929991021}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3825530547763258126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3825530547763258125}
+  - component: {fileID: 3825530547763258124}
+  - component: {fileID: 3825530547763258127}
+  - component: {fileID: 3825530547763258130}
+  m_Layer: 0
+  m_Name: PlayerTexture
+  m_TagString: PlayerAnim
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &3825530547763258127
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825530547763258126}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1bb4f23a2b31dab42a6e5a9a3f9c1af0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3825530547763258130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825530547763258126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbd3af571ffb9e4b824f4075e123cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 3825530547763258127}
+  CurrentAnim: 0
+--- !u!114 &4016814539328699877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866568611720310878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: a48d70d7eb24d474fb37f5f09cd2a67e, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4048699130613316819}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: MovementInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9f1a8b81-8e88-4ad6-9c9a-94d1b2596b98
+    m_ActionName: PlayerControls/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4048699130613316819}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9d236080-4495-4f5c-a4ef-9c45a80a9745
+    m_ActionName: PlayerControls/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f0d24901-d580-4c96-bae7-0850faf15cde
+    m_ActionName: PlayerControls/Interact[/Keyboard/f]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerControls
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &4048699130613316819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866568611720310878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32437e6e868aafc46a8d25ba2177e95c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFly: 0
+  groundLayer: 3
+  playerVelocity: 600
+  jumpMultiplier: 2
+  BaseJumpForce: 1000
+  maxJumpCounter: 2
+  maxhealth: 100
+  currenthealth: 0
+  healthbar: {fileID: 4158475716859047736}
+  pulse: {fileID: 4158475716659447035}
+  grounded: 0
+--- !u!224 &4158475716659447028
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475716659447031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4158475716859047739}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -82.2, y: 5.2}
+  m_SizeDelta: {x: 57.2912, y: 62.7257}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4158475716659447029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475716659447031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: a1d290d23fa4138408915b3fc6a4741c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4158475716659447031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4158475716659447028}
+  - component: {fileID: 4158475716659447034}
+  - component: {fileID: 4158475716659447029}
+  - component: {fileID: 4158475716659447035}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &4158475716659447034
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475716659447031}
+  m_CullTransparentMesh: 1
+--- !u!114 &4158475716659447035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475716659447031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbac6b8b92157f541a1fc0784669a9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 4048699130613316819}
+--- !u!114 &4158475716859047736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475716859047738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8bf3b1e6f2cbc4394c43ef39600560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 4158475716859047737}
+--- !u!114 &4158475716859047737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475716859047738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 4158475717667528808}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 0
+  m_Value: 54.8
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &4158475716859047738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4158475716859047739}
+  - component: {fileID: 4158475716859047737}
+  - component: {fileID: 4158475716859047736}
+  m_Layer: 5
+  m_Name: Healthbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4158475716859047739
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475716859047738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4158475717667528808}
+  - {fileID: 4158475717111928436}
+  - {fileID: 4158475716659447028}
+  m_Father: {fileID: 4158475717616852386}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -273, y: -152}
+  m_SizeDelta: {x: 166.4556, y: 39.5441}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &4158475717111928436
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717111928439}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4158475716859047739}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1.0058975, y: -2.0921001}
+  m_SizeDelta: {x: 2.4700012, y: 3.7280006}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4158475717111928437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717111928439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 43762b300ab0965449247f77857bf6a9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4158475717111928439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4158475717111928436}
+  - component: {fileID: 4158475717111928442}
+  - component: {fileID: 4158475717111928437}
+  m_Layer: 5
+  m_Name: Border
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &4158475717111928442
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717111928439}
+  m_CullTransparentMesh: 1
+--- !u!1 &4158475717565800476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4158475717565800483}
+  - component: {fileID: 4158475717565800482}
+  - component: {fileID: 4158475717565800477}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &4158475717565800477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717565800476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20.64
+  m_fontSizeBase: 20.64
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -99.079254, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &4158475717565800482
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717565800476}
+  m_CullTransparentMesh: 1
+--- !u!224 &4158475717565800483
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717565800476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4158475717616852386}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -288, y: 152}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4158475717616852380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717616852382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &4158475717616852381
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717616852382}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!1 &4158475717616852382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4158475717616852386}
+  - component: {fileID: 4158475717616852381}
+  - component: {fileID: 4158475717616852380}
+  - component: {fileID: 4158475717616852383}
+  - component: {fileID: 4158475717616852387}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &4158475717616852383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717616852382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!224 &4158475717616852386
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717616852382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4158475716859047739}
+  - {fileID: 4158475717565800483}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &4158475717616852387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717616852382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70a96d954a47df4892b68c2e6c78a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objective: {fileID: 4158475717565800477}
+  objective_text: 
+--- !u!224 &4158475717667528808
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717667528811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4158475716859047739}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.1498108, y: -1.724699}
+  m_SizeDelta: {x: -2.2997, y: -3.4495}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4158475717667528809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717667528811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.82745105, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4158475717667528811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4158475717667528808}
+  - component: {fileID: 4158475717667528814}
+  - component: {fileID: 4158475717667528809}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &4158475717667528814
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158475717667528811}
+  m_CullTransparentMesh: 1
+--- !u!1 &5744798319534010188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5744798319534010190}
+  - component: {fileID: 5744798319534010191}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5744798319534010190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5744798319534010188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.62874454, y: 0.71360284, z: 0.34761447}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5744798319534010191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5744798319534010188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb70d187407229e4f9d80cea05ae3a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runBool: 0
+  idleAttackBool: 0
+  jumpBool: 0
+  fallingBool: 0
+--- !u!95 &6679976444015115644
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866568611720310878}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &6679976444015115647
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866568611720310878}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.8}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &6703504327627602123
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866568611720310878}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 10
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &8391907629375428025
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866568611720310878}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 2.8}
+  m_EdgeRadius: 0
