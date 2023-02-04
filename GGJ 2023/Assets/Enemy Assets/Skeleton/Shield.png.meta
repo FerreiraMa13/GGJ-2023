@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af3c8e7a491fa4f439a23fb7825eb784
+guid: 67ac846d153a1f443ba4e5b3b261e012
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -117,91 +117,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Attack_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 39
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 911b674857c35e04ea23205ca0881d91
-      internalID: 1561519820
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Attack_1
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 0
-        width: 66
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 313cb207c8078ca4181aa1d8d937c125
-      internalID: 1989328187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Attack_2
-      rect:
-        serializedVersion: 2
-        x: 293
-        y: 0
-        width: 65
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd604fc3aab84c848847c09878940884
-      internalID: -2027084466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Attack_3
-      rect:
-        serializedVersion: 2
-        x: 413
-        y: 0
-        width: 59
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e531f39ce9ec4b448b1c93463a388b74
-      internalID: 1890162531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -212,11 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      _Attack_3: 1890162531
-      _Attack_2: -2027084466
-      _Attack_1: 1989328187
-      Attack_1: 1561519820
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

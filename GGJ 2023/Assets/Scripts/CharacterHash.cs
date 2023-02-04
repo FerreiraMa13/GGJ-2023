@@ -8,11 +8,13 @@ public class CharacterHash : MonoBehaviour
     public int idleAttackBool;
     public int jumpBool;
     public int fallingBool;
+    public int attackBool;
     private void Awake()
     {
         runBool = Animator.StringToHash("Velocity");
         idleAttackBool = Animator.StringToHash("Attack");
         jumpBool = Animator.StringToHash("Jump");
         fallingBool = Animator.StringToHash("Falling");
+        attackBool = Animator.StringToHash("Attack");
     }
 }
