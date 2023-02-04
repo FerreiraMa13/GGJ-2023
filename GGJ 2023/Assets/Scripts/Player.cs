@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private GameObject gameManager;
     private CharacterAnimations animator;
+// can i edit this? can you see it?
 
     public bool canFly = false;
     public int groundLayer = 3;
