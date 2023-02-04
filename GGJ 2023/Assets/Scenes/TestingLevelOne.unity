@@ -52618,6 +52618,7 @@ GameObject:
   - component: {fileID: 6679976444015115647}
   - component: {fileID: 6679976444015115644}
   - component: {fileID: 8391907629375428026}
+  - component: {fileID: 8391907629375428027}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -52831,8 +52832,6 @@ MonoBehaviour:
   jumpMultiplier: 2
   BaseJumpForce: 1000
   maxJumpCounter: 2
-  maxhealth: 100
-  currenthealth: 0
   healthbar: {fileID: 4158475716859047736}
   pulse: {fileID: 4158475716659447035}
   deathscreen: {fileID: 2055414799}
@@ -52929,7 +52928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac6b8b92157f541a1fc0784669a9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 4048699130613316819}
+  Health: {fileID: 0}
 --- !u!114 &4158475716859047736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52990,7 +52989,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 54.8
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -53679,3 +53678,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8391907629375428027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866568611720310878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe968b6beaee7d44bbb6240e24ec705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
