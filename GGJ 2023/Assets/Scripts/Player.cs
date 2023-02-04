@@ -72,8 +72,6 @@ public class Player : MonoBehaviour
             {
                 float playerLowPoint = transform.position.y + height;
                 float objectHighPoint = hitObject.transform.position.y - collision.bounds.extents.y;
-                Debug.Log(playerLowPoint);
-                Debug.Log(objectHighPoint);
                 if (playerLowPoint > objectHighPoint)
                 {
                     jumpCounter = 0;
