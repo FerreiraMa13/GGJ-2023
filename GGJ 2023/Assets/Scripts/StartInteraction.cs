@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class StartInteraction : MonoBehaviour
 {
     private bool interactable = false;
+    public GameObject controls;
     private GameObject player;
     [SerializeField] GameObject end_pos;
     private bool can_transition = false;
@@ -55,6 +56,7 @@ public class StartInteraction : MonoBehaviour
             if (!inter)
             {
                 inter = true;
+                controls.gameObject.SetActive(false);
                 bubble.SetActive(true);
                 player.GetComponent<Player>().Interact();
                 text_holder.transform.GetChild(current_text).gameObject.SetActive(true);
