@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     public float patrol_chase = 0.5f;
     public float damage = 1.0f;
     public float speed = 1.0f;
+    public float pushBack = 30; 
     public List<Transform> checkpoints = new();
 
     [SerializeField] private float attack_c_timer = 0;
@@ -191,6 +192,14 @@ public class Enemy : MonoBehaviour
         attack_w_timer = attack_window;
         attack_c_timer = attack_cooldown;
         animator.TriggerAttack();
+        if (player.transform.position.x < transform.position.x)
+        {
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(-pushBack, pushBack / 2);
+        }
+        else
+        {
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(pushBack, pushBack / 2);
+        }
     }
     public void DealDamage(int damage_taken)
     {
@@ -199,6 +208,16 @@ public class Enemy : MonoBehaviour
         if(hp <= 0)
         {
             hp = 0;
+        }
+        if (player.transform.position.x < transform.position.x)
+        {
+            //transform.GetComponent<Rigidbody2D>().velocity = new Vector2(pushBack, pushBack / 2);
+            animator.CurrentAnim = 4;
+        }
+        else
+        {
+            //transform.GetComponent<Rigidbody2D>().velocity = new Vector2(-pushBack, pushBack / 2);
+            animator.CurrentAnim = 4;
         }
     }
 }

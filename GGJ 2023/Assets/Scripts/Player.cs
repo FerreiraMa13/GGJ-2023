@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     public float attack_cooldown = 0.2f;
     private float attack_timer = 0.0f;
     private int attack_index = 1;
+
     private void Awake()
     {
         playerController = new PlayerController();
@@ -238,7 +239,6 @@ public class Player : MonoBehaviour
         health.Health -= damage;
         pulse.pulse();
         healthbar.SetHealth(health.Health);
-        
     }
 
     public float GetColliderExtentX()
