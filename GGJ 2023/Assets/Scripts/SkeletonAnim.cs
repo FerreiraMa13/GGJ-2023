@@ -30,6 +30,12 @@ public class SkeletonAnim : MonoBehaviour
         skeleton_input = velocity;
     }
 
+    public void TriggerAttack()
+    {
+        anim?.SetTrigger(hash.skeletonAttackTrigger);
+        Debug.Log("Attacked");
+    }
+
 
     void Update()
     {
@@ -37,14 +43,7 @@ public class SkeletonAnim : MonoBehaviour
         switch (CurrentAnim)
         {
             case 0:
-                anim?.SetBool(hash.skeletonWalkBool, false);
-                anim?.SetBool(hash.skeletonAttackBool, false);
                 anim?.SetBool(hash.skeletonTakeHitBool, false);
-                break;
-            case 1:
-                break;
-            case 2:
-                anim?.SetBool(hash.skeletonAttackBool, true);
                 break;
             case 3:
                 anim?.SetBool(hash.skeletonDeadBool, true);
