@@ -313,7 +313,7 @@ public class Player : MonoBehaviour
     }
     public void Interact()
     {
-        inCutScene = !inCutScene;
+        inCutScene = true;
     }
     private void Interaction()
     {

@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
     public List<Transform> checkpoints = new();
     public float invulnerability = 0.1f;
     public float dead_count = 3.0f;
+    private BarrierScript barrier;
 
     [SerializeField] private float attack_c_timer = 0;
     [SerializeField] private float attack_w_timer = 0;
@@ -50,6 +51,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]  private EnemyState current_state = EnemyState.IDLE;
     private void Awake()
     {
+        barrier = GameObject.FindGameObjectWithTag("Barrier").GetComponent<BarrierScript>();
         animator = GetComponentInChildren<SkeletonAnim>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         rb = GetComponent<Rigidbody2D>();
@@ -269,6 +271,7 @@ public class Enemy : MonoBehaviour
     }
     public void FlagDisable()
     {
+        barrier.RemoveEnemy(this);
         player.RemoveEnemy(this);
         gameObject.SetActive(false);
     }
