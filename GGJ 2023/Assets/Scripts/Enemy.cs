@@ -190,7 +190,7 @@ public class Enemy : MonoBehaviour
     {
         attack_w_timer = attack_window;
         attack_c_timer = attack_cooldown;
-        animator.CurrentAnim = 2;
+        animator.TriggerAttack();
     }
     public void DealDamage(int damage_taken)
     {
