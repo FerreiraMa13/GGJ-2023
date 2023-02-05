@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private GameObject gameManager;
     private CharacterAnimations animator;
     private Collider2D collision_collider;
-    private List<Enemy> enemies = new();
+    public List<Enemy> enemies = new();
 
     public bool canFly = false;
     public bool inCutScene = false;
@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     public Healthbar healthbar;
     public Pulse pulse;
     public Image deathscreen;
+
     private float jumpCounter = 0;
     private float height;
     public bool fading;
@@ -88,7 +89,6 @@ public class Player : MonoBehaviour
         fading = false;
 
     }
-
     private void Update()
     {
         if (health.Health <= 0 && fading == true)
@@ -114,11 +114,11 @@ public class Player : MonoBehaviour
             {
                 if (movementInput.x > 0)
                 {
-                    GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = false;
+                    gameObject.transform.localScale = new Vector3(1, 1, 1);
                 }
                 else if (movementInput.x < 0)
                 {
-                    GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = true;
+                    gameObject.transform.localScale = new Vector3(-1, 1, 1);
                 }
             }
             else
@@ -250,7 +250,7 @@ public class Player : MonoBehaviour
             }
         }
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health.Health -= damage;
         pulse.pulse();
@@ -301,7 +301,7 @@ public class Player : MonoBehaviour
                     index = i;
                 }
             }
-
+            Debug.Log(index);
             enemies[index].DealDamage(1);
         }
     }

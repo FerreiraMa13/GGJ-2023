@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6705382468131004621}
   - component: {fileID: 5723117032666623648}
   - component: {fileID: 4889622884402375781}
-  - component: {fileID: 1337862759128403035}
+  - component: {fileID: 2965225161007584940}
   m_Layer: 0
   m_Name: Goblin_Renderer
   m_TagString: Untagged
@@ -106,7 +106,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1337862759128403035
+--- !u!114 &2965225161007584940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 308918642651204711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3619308a48155c479fd8583cfa4d439, type: 3}
+  m_Script: {fileID: 11500000, guid: eaaf53c7d65dad247b111990f9a25217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 4889622884402375781}
@@ -165,7 +165,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648667205259506783}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -215,13 +215,16 @@ MonoBehaviour:
   patrol_chase: 0.5
   damage: 1
   speed: 150
+  pushBack: 30
   checkpoints:
   - {fileID: 0}
   - {fileID: 0}
+  invulnerability: 0.1
   attack_c_timer: 0
   attack_w_timer: 0
   idle_timer: 0
   patrol_chase_timer: 0.5
+  invul_timer: 0
   in_range: 0
   current_state: 0
 --- !u!61 &648667205259506769
