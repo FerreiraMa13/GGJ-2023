@@ -102,6 +102,7 @@ public class Player : MonoBehaviour
                 fading = true;
                 if (Input.GetKeyDown(KeyCode.R))
                 {
+                    health.Health = 100;
                     Application.LoadLevel(Application.loadedLevel);
                 }
             }
@@ -268,6 +269,7 @@ public class Player : MonoBehaviour
     {
         if(attack_timer <= 0 && !inCutScene)
         {
+            sfxManager.sfxInstance.audio.PlayOneShot(sfxManager.sfxInstance.slash);
             AttackAnimation();
         }
     }
