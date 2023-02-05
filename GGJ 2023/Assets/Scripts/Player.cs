@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private List<Enemy> enemies = new();
 
     public bool canFly = false;
+    public bool inCutScene = false;
     public GameObject healthb;
     public TMPro.TMP_Text text;
     public int groundLayer = 3;
@@ -40,6 +41,8 @@ public class Player : MonoBehaviour
     public float attack_cooldown = 0.2f;
     private float attack_timer = 0.0f;
     private int attack_index = 1;
+    private Transform move_target;
+    public float auto_move_treshold = 5;
     private void Awake()
     {
         playerController = new PlayerController();
@@ -103,7 +106,6 @@ public class Player : MonoBehaviour
                 }
             }
 
-
             animator.SetInput(Mathf.Abs(movementInput.x));
             int frame = 0;
 
@@ -145,13 +147,29 @@ public class Player : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                TakeDamage(20);
+                
+                /*TakeDamage(20);*/
             }
         }
     }
     void FixedUpdate()
     {
-        
+        if(!inCutScene)
+        {
+            HandleMovement();
+        }
+        else
+        {
+            MoveTowards();
+        }
+
+        if(attack_timer > 0)
+        {
+            attack_timer -= Time.deltaTime;
+        }
+    }
+    private void HandleMovement()
+    {
         float moveX = movementInput.x * playerVelocity * Time.deltaTime;
         float moveY = rb.velocity.y;
         if (canFly)
@@ -160,25 +178,26 @@ public class Player : MonoBehaviour
         }
 
         rb.velocity = new Vector2(moveX, moveY);
-
-        if(attack_timer > 0)
-        {
-            attack_timer -= Time.deltaTime;
-        }
     }
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if(jumpCounter < maxJumpCounter && ctx.performed)
+        if(!inCutScene)
         {
-            jumpCounter++;
-            //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
-            rb.velocity = new Vector2(rb.velocity.x, 35);
-            grounded = false;
+            if (jumpCounter < maxJumpCounter && ctx.performed)
+            {
+                jumpCounter++;
+                //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
+                rb.velocity = new Vector2(rb.velocity.x, 35);
+                grounded = false;
+            }
         }
     }
     public void MovementInput(InputAction.CallbackContext ctx)
     {
-        movementInput = ctx.ReadValue<Vector2>();
+        if(!inCutScene)
+        {
+            movementInput = ctx.ReadValue<Vector2>();
+        } 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -240,7 +259,6 @@ public class Player : MonoBehaviour
         healthbar.SetHealth(health.Health);
         
     }
-
     public float GetColliderExtentX()
     {
         if(collision_collider)
@@ -251,7 +269,7 @@ public class Player : MonoBehaviour
     }
     public void Attack()
     {
-        if(attack_timer <= 0)
+        if(attack_timer <= 0 && !inCutScene)
         {
             AttackAnimation();
         }
@@ -270,10 +288,8 @@ public class Player : MonoBehaviour
         animator.AttackTrigger();
         attack_timer = attack_cooldown;
     }
-
     public void FlagHit()
     {
-        Debug.Log("Player Flag");
         if (enemies.Count > 0)
         {
             float distance = 9999;
@@ -289,6 +305,25 @@ public class Player : MonoBehaviour
             }
 
             enemies[index].DealDamage(1);
+        }
+    }
+    public void Interact()
+    {
+        inCutScene = !inCutScene;
+    }
+    public void SetMoveTarget( Transform new_target)
+    {
+        move_target = new_target;
+    }
+    private void MoveTowards()
+    {
+        if (move_target != null) 
+        {
+            Vector2 direction = move_target.position - transform.position;
+            if(direction.x > auto_move_treshold)
+            direction.Normalize();
+            float moveX = direction.x * playerVelocity * Time.deltaTime;
+            rb.velocity = new Vector2(moveX, 0);
         }
     }
 }
