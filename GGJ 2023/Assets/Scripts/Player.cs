@@ -59,6 +59,7 @@ public class Player : MonoBehaviour
         collision_collider = GetComponent<BoxCollider2D>();
         height = GetComponent<BoxCollider2D>().bounds.extents.y;
         animator = GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<CharacterAnimations>();
+        playerController.PlayerControls.Interact.performed += ctx => Interaction();
         fading = false;
     }
 
@@ -308,6 +309,10 @@ public class Player : MonoBehaviour
     public void Interact()
     {
         inCutScene = !inCutScene;
+    }
+    private void Interaction()
+    {
+        GameObject.FindGameObjectWithTag("Wizard").GetComponent<StartInteraction>().StartEntranceSequence();
     }
     public void SetMoveTarget( Transform new_target)
     {
