@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public TMPro.TMP_Text text;
     public int groundLayer = 3;
     public int enemyLayer = 6;
+    private bool dead = false;
 
     public float playerVelocity = 1;
     public float jumpMultiplier = 1;
@@ -62,7 +63,6 @@ public class Player : MonoBehaviour
         playerController.PlayerControls.Interact.performed += ctx => Interaction();
         fading = false;
     }
-
     private void OnEnable()
     {
         playerController.Enable();
@@ -183,7 +183,7 @@ public class Player : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if(!inCutScene)
+        if(!inCutScene && jumpCounter < maxJumpCounter)
         {
             jumpCounter++;
             //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
@@ -254,6 +254,11 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health.Health -= damage;
+        if(health.Health <= 0)
+        {
+            inCutScene = true;
+            dead = true;
+        }
         pulse.pulse();
         healthbar.SetHealth(health.Health);
     }
@@ -327,6 +332,13 @@ public class Player : MonoBehaviour
             direction.Normalize();
             float moveX = direction.x * playerVelocity * Time.deltaTime;
             rb.velocity = new Vector2(moveX, 0);
+        }
+    }
+    public void RemoveEnemy(Enemy new_enemy)
+    {
+        if(enemies.Contains(new_enemy))
+        {
+            enemies.Remove(new_enemy);
         }
     }
 }

@@ -56,4 +56,8 @@ public class SkeletonAnim : MonoBehaviour
     {
         enemy_script.FlagAttack();
     }
+    public virtual void FlagDisable()
+    {
+        enemy_script.FlagDisable();
+    }
 }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GoblinAnimator1 : SkeletonAnim
 {
-    private GoblinHash hash;
+    private GoblinHash new_hash;
     void Awake()
     {
         enemy_script = transform.parent.GetComponent<Enemy>();
         anim = GetComponent<Animator>();
-        hash = GameObject.FindGameObjectWithTag("GameController").GetComponent<GoblinHash>();
+        new_hash = GameObject.FindGameObjectWithTag("GameController").GetComponent<GoblinHash>();
         /*anim?.SetLayerWeight(1, 1.0f);*/
     }
 
@@ -29,22 +29,26 @@ public class GoblinAnimator1 : SkeletonAnim
 
     public override void TriggerAttack()
     {
-        anim?.SetTrigger(hash.AttackTrigger);
+        anim?.SetTrigger(new_hash.AttackTrigger);
     }
     public override void TriggerKnock()
     {
-        anim?.SetTrigger(hash.TakeHitTrigger);
+        anim?.SetTrigger(new_hash.TakeHitTrigger);
     }
     public override void TriggerDead()
     {
-        anim?.SetTrigger(hash.DeadTrigger);
+        anim?.SetTrigger(new_hash.DeadTrigger);
     }
     protected override void UpdateValues()
     {
-        anim?.SetFloat(hash.WalkBool, skeleton_input);
+        anim?.SetFloat(new_hash.WalkBool, skeleton_input);
     }
     public override void FlagAttack()
     {
         enemy_script.FlagAttack();
+    }
+    public override void FlagDisable()
+    {
+        enemy_script.FlagDisable();
     }
 }

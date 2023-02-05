@@ -38928,7 +38928,7 @@ GameObject:
   - component: {fileID: 1171283683}
   - component: {fileID: 1171283682}
   - component: {fileID: 1171283681}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39001,7 +39001,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 1705098787, guid: d937a4de13b8b984c86fa3b6cbf91313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -53826,7 +53826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 648667205259506768, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
       propertyPath: hp
-      value: 20
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 648667205259506768, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
       propertyPath: damage

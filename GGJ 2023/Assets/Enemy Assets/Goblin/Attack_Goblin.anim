@@ -91,7 +91,7 @@ AnimationClip:
   - time: 0.5
     functionName: FlagAttack
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: db85ecd4e7ab830468eed24f01dc6249, type: 3}
+    objectReferenceParameter: {fileID: 11500000, guid: eaaf53c7d65dad247b111990f9a25217, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

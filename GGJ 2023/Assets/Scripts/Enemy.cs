@@ -9,6 +9,7 @@ enum EnemyState
     PATROLLING = 1,
     CHASING = 2,
     STUN = 3,
+    DEAD = 4,
     UNKNOWN = -1
 }
 public class Enemy : MonoBehaviour
@@ -29,6 +30,7 @@ public class Enemy : MonoBehaviour
     public float pushBack = 30; 
     public List<Transform> checkpoints = new();
     public float invulnerability = 0.1f;
+    public float dead_count = 3.0f;
 
     [SerializeField] private float attack_c_timer = 0;
     [SerializeField] private float attack_w_timer = 0;
@@ -43,6 +45,7 @@ public class Enemy : MonoBehaviour
     private float speed_multiplier = 1.0f;
     private float chase_multiplier = 1.2f;
     private SkeletonAnim animator;
+    private float dead_timer = 0.0f;
 
     [SerializeField]  private EnemyState current_state = EnemyState.IDLE;
     private void Awake()
@@ -80,6 +83,18 @@ public class Enemy : MonoBehaviour
         HandleStates();
         HandleMovement();
         AttackLogic();
+        if(current_state == EnemyState.DEAD)
+        {
+            if (dead_timer > 0)
+            {
+                dead_timer -= Time.deltaTime;
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
+        }
+       
     }
     private void HandleStates()
     {
@@ -183,7 +198,7 @@ public class Enemy : MonoBehaviour
     }
     private void AttackLogic()
     {
-        if (in_range)
+        if (in_range && current_state != EnemyState.DEAD)
         {
             float initial_distance = MathF.Abs((player.transform.position - transform.position).magnitude);
             initial_distance -= collision_collider.bounds.extents.x;
@@ -219,12 +234,18 @@ public class Enemy : MonoBehaviour
         hp -= damage_taken;
         if(hp <= 0)
         {
+            Debug.Log("Dead");
             hp = 0;
+            animator.TriggerDead();
+            current_state = EnemyState.DEAD;
+            dead_timer = dead_count;
         }
-
-        current_state = EnemyState.STUN;
-        invul_timer = invulnerability;
-        HandleKnock();
+        else
+        {
+            current_state = EnemyState.STUN;
+            invul_timer = invulnerability;
+            HandleKnock();
+        }
     }
     private void HandleKnock()
     {
@@ -245,5 +266,10 @@ public class Enemy : MonoBehaviour
     public void FlagAttack()
     {
         player.TakeDamage(damage);
+    }
+    public void FlagDisable()
+    {
+        player.RemoveEnemy(this);
+        gameObject.SetActive(false);
     }
 }
