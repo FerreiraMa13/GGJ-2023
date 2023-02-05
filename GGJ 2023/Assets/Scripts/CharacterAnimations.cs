@@ -16,7 +16,7 @@ public class CharacterAnimations : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         hash = GameObject.FindGameObjectWithTag("GameController").GetComponent<CharacterHash>();
-        anim?.SetLayerWeight(1, 1f);
+        anim?.SetLayerWeight(1, 1.0f);
         //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
     

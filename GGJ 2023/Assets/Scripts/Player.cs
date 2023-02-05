@@ -183,13 +183,10 @@ public class Player : MonoBehaviour
     {
         if(!inCutScene)
         {
-            if (jumpCounter < maxJumpCounter && ctx.performed)
-            {
-                jumpCounter++;
-                //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
-                rb.velocity = new Vector2(rb.velocity.x, 35);
-                grounded = false;
-            }
+            jumpCounter++;
+            //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
+            rb.velocity = new Vector2(rb.velocity.x, BaseJumpForce * jumpMultiplier);
+            grounded = false;
         }
     }
     public void MovementInput(InputAction.CallbackContext ctx)
