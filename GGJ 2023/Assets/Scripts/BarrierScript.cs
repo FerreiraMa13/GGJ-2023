@@ -6,13 +6,12 @@ public class BarrierScript : MonoBehaviour
 {
     List<GameObject> enemies = new List<GameObject>();
     GameObject barrierParent;
-
-    Sprite barrierOpenTexture;
-    Sprite barrierClosedTexture;
+    public Sprite barrierOpenTexture;
+    public Sprite barrierClosedTexture;
 
     private void Awake()
     {
-        enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+        //enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
         barrierParent = this.gameObject;
         barrierParent.transform.Find("BarrierTexture").GetComponent<SpriteRenderer>().sprite = barrierClosedTexture;
         barrierParent.transform.Find("BarrierBody").gameObject.SetActive(true); 
@@ -33,11 +32,12 @@ public class BarrierScript : MonoBehaviour
             {
                 enemyCount--;
             }*/
+            Debug.Log("looping enemies"); 
         }
         if (enemyCount <= 0)
         {
             barrierParent.transform.Find("BarrierBody").gameObject.SetActive(false);
-            barrierParent.transform.Find("BarrierTexture").GetComponent<SpriteRenderer>().sprite = barrierOpenTexture; 
+            barrierParent.transform.Find("BarrierTexture").GetComponent<SpriteRenderer>().sprite = barrierOpenTexture;
         }
     }
 }

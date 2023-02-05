@@ -6,15 +6,16 @@ public class ObjectScript : MonoBehaviour
 {
     public float textTimer = 0; 
     [Range(1, 10)] public float textDuration = 3;
-
+    
     public TextMesh textMesh;
     public string messageText;
     [Range(0.5f, 10)] public int textSize = 1;
     public Color textColour;
     public Font font; 
 
-    public Texture2D objectTexture;
-    public GameObject orbObject;
+    public Sprite objectSprite;
+    private GameObject orbObject;
+    [Range(0.1f, 3f)] public float spriteScale = 1; 
     [SerializeField] GameObject orbParent;
     [SerializeField] GameObject textObject;
     Screen screen;
@@ -25,9 +26,14 @@ public class ObjectScript : MonoBehaviour
 
     private void Awake()
     {
+
         orbParent = this.gameObject;
         orbObject = transform.Find("OrbSprite").gameObject;
-        orbObject.SetActive(false);
+        textObject = GameObject.FindGameObjectWithTag("Player").transform.Find("ChatBubble").gameObject;
+        textObject.SetActive(false);
+        orbObject.SetActive(true);
+        orbObject.GetComponent<SpriteRenderer>().sprite = objectSprite;
+        orbObject.transform.localScale = new Vector3(spriteScale, spriteScale, 1);
         /*if (pickedUp)
         {
             textMesh = new TextMesh();
@@ -48,9 +54,11 @@ public class ObjectScript : MonoBehaviour
         if (pickedUp)
         {
             //textMesh.transform.position = GameObject.FindGameObjectWithTag("Camera").transform.position;
+            textObject.SetActive(true);
             textTimer += Time.deltaTime; 
             if (textTimer > textDuration)
             {
+                textObject.SetActive(false);
                 textTimer = 0;
                 pickedUp = false; 
             }
@@ -68,11 +76,11 @@ public class ObjectScript : MonoBehaviour
         spawned = false;
         orbObject.SetActive(false); 
         pickedUp = true; 
-        textMesh = new TextMesh();
+        /*textMesh = new TextMesh();
         textMesh.text = messageText;
         textMesh.fontSize = textSize;
         textMesh.color = textColour;
-        textMesh.font = font; 
+        textMesh.font = font; */
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

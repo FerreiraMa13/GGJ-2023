@@ -157,8 +157,8 @@ public class Player : MonoBehaviour
         if(jumpCounter < maxJumpCounter && ctx.performed)
         {
             jumpCounter++;
-            rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
-            
+            //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
+            rb.velocity = new Vector2(rb.velocity.x, 35);
             grounded = false;
         }
     }

@@ -210,3 +210,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89da0eed77da63b4d9cc6042f13a4d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barrierOpenTexture: {fileID: 21300000, guid: ec370294ecd307945bd986c9cf122fd9, type: 3}
+  barrierClosedTexture: {fileID: 21300000, guid: a1d290d23fa4138408915b3fc6a4741c, type: 3}
