@@ -54540,6 +54540,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1348375097}
+  healthbar: {fileID: 4158475716859047738}
+  text: {fileID: 4158475717565800476}
   paused: 0
 --- !u!224 &4158475717667528808
 RectTransform:

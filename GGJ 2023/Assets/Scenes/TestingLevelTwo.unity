@@ -5169,6 +5169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1399105195}
+  healthbar: {fileID: 1469483681}
+  text: {fileID: 154717760}
   paused: 0
 --- !u!114 &248679778
 MonoBehaviour:
