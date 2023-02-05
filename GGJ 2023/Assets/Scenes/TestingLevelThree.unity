@@ -436,7 +436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 71067719}
   - component: {fileID: 71067720}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 134716709}
   - component: {fileID: 134716710}
   - component: {fileID: 134716711}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1185,7 +1185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 151938739}
   - component: {fileID: 151938740}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2084,7 +2084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 324751770}
   - component: {fileID: 324751771}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_5 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2252,7 +2252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 412941899}
   - component: {fileID: 412941900}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2840,7 +2840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 503481005}
   - component: {fileID: 503481006}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3008,7 +3008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 525875539}
   - component: {fileID: 525875540}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3260,7 +3260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627148945}
   - component: {fileID: 627148946}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3428,7 +3428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654382817}
   - component: {fileID: 654382818}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_5 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3707,7 +3707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671313989}
   - component: {fileID: 671313990}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4043,7 +4043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 756872718}
   - component: {fileID: 756872719}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_5 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4547,7 +4547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 923707862}
   - component: {fileID: 923707863}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5316,7 +5316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1081717463}
   - component: {fileID: 1081717464}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5512,7 +5512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1123961392}
   - component: {fileID: 1123961393}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_10 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5849,7 +5849,7 @@ GameObject:
   - component: {fileID: 1182279541}
   - component: {fileID: 1182279542}
   - component: {fileID: 1182279543}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8788,7 +8788,7 @@ GameObject:
   - component: {fileID: 1864280635}
   - component: {fileID: 1864280636}
   - component: {fileID: 1864280637}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9811,7 +9811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066593736}
   - component: {fileID: 2066593737}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
