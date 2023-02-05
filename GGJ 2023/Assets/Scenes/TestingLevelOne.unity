@@ -52992,6 +52992,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &63972503443916590
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 308918642651204711, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_TagString
+      value: SkeletonAnim
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506768, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: checkpoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 656775328}
+    - target: {fileID: 648667205259506768, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: checkpoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 443437003}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.199579
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506780, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506783, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_Name
+      value: Enemy (G)
+      objectReference: {fileID: 0}
+    - target: {fileID: 648667205259506783, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: de1c3535ca86b85418519f446bfe80a9, type: 3}
 --- !u!4 &822960560929991021
 Transform:
   m_ObjectHideFlags: 0
@@ -53065,6 +53140,10 @@ PrefabInstance:
     - target: {fileID: 3765131228726644182, guid: 7fc20a933cb84d446acc40aa8396da65, type: 3}
       propertyPath: m_Name
       value: Enemy (S)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765131228726644182, guid: 7fc20a933cb84d446acc40aa8396da65, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3765131228726644185, guid: 7fc20a933cb84d446acc40aa8396da65, type: 3}
       propertyPath: checkpoints.Array.data[0]
@@ -53321,8 +53400,8 @@ MonoBehaviour:
   groundLayer: 3
   enemyLayer: 6
   playerVelocity: 600
-  jumpMultiplier: 2
-  BaseJumpForce: 1000
+  jumpMultiplier: 1
+  BaseJumpForce: 35
   maxJumpCounter: 2
   healthbar: {fileID: 4158475716859047736}
   pulse: {fileID: 4158475716659447035}
@@ -53997,7 +54076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonWalkBool: 0
-  skeletonAttackBool: 0
+  skeletonAttackTrigger: 0
   skeletonDeadBool: 0
   skeletonTakeHitBool: 0
 --- !u!1001 &6525803784952582104

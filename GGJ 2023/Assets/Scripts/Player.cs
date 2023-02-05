@@ -172,7 +172,7 @@ public class Player : MonoBehaviour
         {
             jumpCounter++;
             //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
-            rb.velocity = new Vector2(rb.velocity.x, 35);
+            rb.velocity = new Vector2(rb.velocity.x, BaseJumpForce * jumpMultiplier);
             grounded = false;
         }
     }
