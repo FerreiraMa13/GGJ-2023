@@ -19,7 +19,7 @@ public class BarrierScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
     }
 
     // Update is called once per frame

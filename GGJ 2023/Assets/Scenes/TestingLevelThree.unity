@@ -10110,8 +10110,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2802100879416389588, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
+      propertyPath: jumpCD
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802100879416389588, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
       propertyPath: healthbar
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802100879416389588, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
+      propertyPath: cameraClamp.x
+      value: -26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802100879416389588, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
+      propertyPath: cameraClamp.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802100879416389588, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
+      propertyPath: baseJumpVelocity
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3160350787861377035, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
       propertyPath: m_SortingOrder
@@ -10421,6 +10437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32437e6e868aafc46a8d25ba2177e95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraClamp: {x: 0, y: 0}
   canFly: 0
   inCutScene: 0
   healthb: {fileID: 0}
@@ -10428,18 +10445,21 @@ MonoBehaviour:
   groundLayer: 3
   enemyLayer: 6
   playerVelocity: 400
-  jumpMultiplier: 2
-  BaseJumpForce: 700
+  baseJumpVelocity: 50
   maxJumpCounter: 2
   healthbar: {fileID: 0}
   pulse: {fileID: 0}
   deathscreen: {fileID: 0}
+  jumpCounter: 0
   fading: 0
   deadtext1: {fileID: 0}
   deadtext2: {fileID: 0}
   grounded: 0
   attack_cooldown: 0.2
   auto_move_treshold: 5
+  jumpCD: 0.1
+  jumpTimer: 0
+  canJump: 1
 --- !u!114 &2986526490196153249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10501,6 +10521,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f0d24901-d580-4c96-bae7-0850faf15cde
     m_ActionName: PlayerControls/Interact[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fdb60245-3b09-4264-8f8e-ea934dd84b30
+    m_ActionName: PlayerControls/Attack[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerControls
@@ -10732,7 +10756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &4789818587330073400
 Animator:
   serializedVersion: 4

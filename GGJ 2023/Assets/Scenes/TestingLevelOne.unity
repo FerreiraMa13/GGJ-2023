@@ -4208,7 +4208,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &269069430
 MonoBehaviour:
@@ -53981,6 +53981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32437e6e868aafc46a8d25ba2177e95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraClamp: {x: 8, y: 55}
   canFly: 0
   inCutScene: 0
   healthb: {fileID: 4158475716859047738}
@@ -53988,8 +53989,7 @@ MonoBehaviour:
   groundLayer: 3
   enemyLayer: 6
   playerVelocity: 600
-  jumpMultiplier: 1
-  BaseJumpForce: 35
+  baseJumpVelocity: 30
   maxJumpCounter: 2
   healthbar: {fileID: 4158475716859047736}
   pulse: {fileID: 4158475716659447035}
