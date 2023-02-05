@@ -1057,7 +1057,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33127054}
   - component: {fileID: 33127053}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2233,7 +2233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138624912}
   - component: {fileID: 138624913}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (143)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3487,7 +3487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 175725588}
   - component: {fileID: 175725587}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4270,7 +4270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215556138}
   - component: {fileID: 215556139}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4963,7 +4963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 242307854}
   - component: {fileID: 242307853}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6336,6 +6336,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f0d24901-d580-4c96-bae7-0850faf15cde
     m_ActionName: PlayerControls/Interact[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fdb60245-3b09-4264-8f8e-ea934dd84b30
+    m_ActionName: PlayerControls/Attack[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerControls
@@ -7167,7 +7171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 340273769}
   - component: {fileID: 340273768}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7251,7 +7255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 340884509}
   - component: {fileID: 340884510}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (142)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8269,7 +8273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 398607326}
   - component: {fileID: 398607325}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11332,7 +11336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 564986422}
   - component: {fileID: 564986421}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13091,7 +13095,7 @@ GameObject:
   - component: {fileID: 661033988}
   - component: {fileID: 661033989}
   - component: {fileID: 661033990}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (141)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13705,7 +13709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 681962388}
   - component: {fileID: 681962387}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14209,7 +14213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689559523}
   - component: {fileID: 689559524}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15016,7 +15020,7 @@ GameObject:
   - component: {fileID: 744698173}
   - component: {fileID: 744698172}
   - component: {fileID: 744698174}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15210,7 +15214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 765964298}
   - component: {fileID: 765964299}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (144)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16051,7 +16055,7 @@ GameObject:
   - component: {fileID: 813277022}
   - component: {fileID: 813277021}
   - component: {fileID: 813277023}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17161,7 +17165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 886379618}
   - component: {fileID: 886379619}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18706,7 +18710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 958928111}
   - component: {fileID: 958928110}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19210,7 +19214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 987656479}
   - component: {fileID: 987656478}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21784,7 +21788,7 @@ GameObject:
   - component: {fileID: 1182783330}
   - component: {fileID: 1182783329}
   - component: {fileID: 1182783331}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22062,7 +22066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1188541836}
   - component: {fileID: 1188541837}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (127)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22249,7 +22253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1192228521}
   - component: {fileID: 1192228522}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (131)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23473,7 +23477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1287517097}
   - component: {fileID: 1287517098}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (135)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23809,7 +23813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1311246110}
   - component: {fileID: 1311246109}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24355,7 +24359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325710726}
   - component: {fileID: 1325710725}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31070,7 +31074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1682792586}
   - component: {fileID: 1682792585}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31154,7 +31158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686927651}
   - component: {fileID: 1686927652}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (132)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33384,7 +33388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812230785}
   - component: {fileID: 1812230786}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34369,7 +34373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1845082782}
   - component: {fileID: 1845082783}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (130)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34622,7 +34626,7 @@ GameObject:
   - component: {fileID: 1859047476}
   - component: {fileID: 1859047477}
   - component: {fileID: 1859047478}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36347,7 +36351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966880989}
   - component: {fileID: 1966880990}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (133)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37391,7 +37395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2039973159}
   - component: {fileID: 2039973160}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (129)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37475,7 +37479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2040166605}
   - component: {fileID: 2040166606}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (134)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37896,7 +37900,7 @@ GameObject:
   - component: {fileID: 2057789523}
   - component: {fileID: 2057789522}
   - component: {fileID: 2057789524}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38846,7 +38850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102609132}
   - component: {fileID: 2102609131}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38931,7 +38935,7 @@ GameObject:
   - component: {fileID: 2103049710}
   - component: {fileID: 2103049709}
   - component: {fileID: 2103049711}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Mossy - TileSet_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39520,7 +39524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119542368}
   - component: {fileID: 2119542369}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Square - Black (128)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
