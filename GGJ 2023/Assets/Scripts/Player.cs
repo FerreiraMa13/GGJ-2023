@@ -255,7 +255,6 @@ public class Player : MonoBehaviour
         health.Health -= damage;
         pulse.pulse();
         healthbar.SetHealth(health.Health);
-        
     }
     public float GetColliderExtentX()
     {
