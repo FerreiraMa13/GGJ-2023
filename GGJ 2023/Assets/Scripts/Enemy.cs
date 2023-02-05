@@ -38,11 +38,13 @@ public class Enemy : MonoBehaviour
     private int checkpoint_direction = 1;
     private float speed_multiplier = 1.0f;
     private float chase_multiplier = 1.2f;
+    private SkeletonAnim animator;
 
     [SerializeField]  private EnemyState current_state = EnemyState.IDLE;
 
     private void Awake()
     {
+        animator = GameObject.FindGameObjectWithTag("SkeletonAnim").GetComponent<SkeletonAnim>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         rb = GetComponent<Rigidbody2D>();
         foreach(var comp in GetComponents<Collider2D>())
@@ -107,7 +109,7 @@ public class Enemy : MonoBehaviour
                 }
                 break;
             case EnemyState.PATROLLING:
-                if(checkpoints.Count > 0)
+                if (checkpoints.Count > 0)
                 {
                     MoveTowards(checkpoints[checkpoint_index].position, true);
                     CheckProximityPatrol();
@@ -115,6 +117,7 @@ public class Enemy : MonoBehaviour
                 
                 break;
             case EnemyState.IDLE:
+                animator.SetVelocity(0);
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 if(idle_timer > 0)
                 {
@@ -130,6 +133,7 @@ public class Enemy : MonoBehaviour
     private void MoveTowards(Vector2 point, bool clamped)
     {
         Vector2 direction = point - new Vector2(transform.position.x, transform.position.y);
+        animator.SetVelocity(Mathf.Abs(direction.x));
         direction.Normalize();
         float moveX = direction.x * speed * speed_multiplier * Time.deltaTime;
         float moveY = rb.velocity.y;
@@ -186,7 +190,7 @@ public class Enemy : MonoBehaviour
     {
         attack_w_timer = attack_window;
         attack_c_timer = attack_cooldown;
-        Debug.Log("Attack");
+        animator.CurrentAnim = 2;
     }
     public void DealDamage(int damage_taken)
     {
