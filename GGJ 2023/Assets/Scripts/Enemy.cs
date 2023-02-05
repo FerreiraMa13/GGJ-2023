@@ -8,6 +8,8 @@ enum EnemyState
     IDLE = 0,
     PATROLLING = 1,
     CHASING = 2,
+    STUN = 3,
+    DEAD = 4,
     UNKNOWN = -1
 }
 public class Enemy : MonoBehaviour
@@ -23,15 +25,18 @@ public class Enemy : MonoBehaviour
     public float idle_duration = 0.2f;
     public float patrol_leeway = 1.0f;
     public float patrol_chase = 0.5f;
-    public float damage = 1.0f;
+    public int damage = 1;
     public float speed = 1.0f;
     public float pushBack = 30; 
     public List<Transform> checkpoints = new();
+    public float invulnerability = 0.1f;
+    public float dead_count = 3.0f;
 
     [SerializeField] private float attack_c_timer = 0;
     [SerializeField] private float attack_w_timer = 0;
     [SerializeField] private float idle_timer = 0;
     [SerializeField] private float patrol_chase_timer = 0;
+    [SerializeField] private float invul_timer = 0;
     [SerializeField] private bool in_range = false;
     private bool out_range = false;
     private int checkpoint_index = 0;
@@ -40,12 +45,12 @@ public class Enemy : MonoBehaviour
     private float speed_multiplier = 1.0f;
     private float chase_multiplier = 1.2f;
     private SkeletonAnim animator;
+    private float dead_timer = 0.0f;
 
     [SerializeField]  private EnemyState current_state = EnemyState.IDLE;
-
     private void Awake()
     {
-        animator = GameObject.FindGameObjectWithTag("SkeletonAnim").GetComponent<SkeletonAnim>();
+        animator = GetComponentInChildren<SkeletonAnim>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         rb = GetComponent<Rigidbody2D>();
         foreach(var comp in GetComponents<Collider2D>())
@@ -78,6 +83,18 @@ public class Enemy : MonoBehaviour
         HandleStates();
         HandleMovement();
         AttackLogic();
+        if(current_state == EnemyState.DEAD)
+        {
+            if (dead_timer > 0)
+            {
+                dead_timer -= Time.deltaTime;
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
+        }
+       
     }
     private void HandleStates()
     {
@@ -114,8 +131,7 @@ public class Enemy : MonoBehaviour
                 {
                     MoveTowards(checkpoints[checkpoint_index].position, true);
                     CheckProximityPatrol();
-                }
-                
+                }      
                 break;
             case EnemyState.IDLE:
                 animator.SetVelocity(0);
@@ -129,6 +145,18 @@ public class Enemy : MonoBehaviour
                     current_state = EnemyState.PATROLLING;
                 }
                 break;
+            case EnemyState.STUN:
+                animator.SetVelocity(0);
+                if(invul_timer > 0)
+                {
+                    invul_timer -= Time.deltaTime;
+                }
+                else
+                {
+                    current_state = EnemyState.IDLE;
+                    idle_timer = idle_duration / 2;
+                }
+                break;
         }
     }
     private void MoveTowards(Vector2 point, bool clamped)
@@ -136,6 +164,14 @@ public class Enemy : MonoBehaviour
         Vector2 direction = point - new Vector2(transform.position.x, transform.position.y);
         animator.SetVelocity(Mathf.Abs(direction.x));
         direction.Normalize();
+        if(direction.x < 0)
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
         float moveX = direction.x * speed * speed_multiplier * Time.deltaTime;
         float moveY = rb.velocity.y;
         if (!clamped)
@@ -162,7 +198,7 @@ public class Enemy : MonoBehaviour
     }
     private void AttackLogic()
     {
-        if (in_range)
+        if (in_range && current_state != EnemyState.DEAD)
         {
             float initial_distance = MathF.Abs((player.transform.position - transform.position).magnitude);
             initial_distance -= collision_collider.bounds.extents.x;
@@ -192,32 +228,48 @@ public class Enemy : MonoBehaviour
         attack_w_timer = attack_window;
         attack_c_timer = attack_cooldown;
         animator.TriggerAttack();
-        if (player.transform.position.x < transform.position.x)
-        {
-            player.GetComponent<Rigidbody2D>().velocity = new Vector2(-pushBack, pushBack / 2);
-        }
-        else
-        {
-            player.GetComponent<Rigidbody2D>().velocity = new Vector2(pushBack, pushBack / 2);
-        }
     }
     public void DealDamage(int damage_taken)
     {
         hp -= damage_taken;
-        Debug.Log(hp);
         if(hp <= 0)
         {
+            Debug.Log("Dead");
             hp = 0;
-        }
-        if (player.transform.position.x < transform.position.x)
-        {
-            //transform.GetComponent<Rigidbody2D>().velocity = new Vector2(pushBack, pushBack / 2);
-            animator.CurrentAnim = 4;
+            animator.TriggerDead();
+            current_state = EnemyState.DEAD;
+            dead_timer = dead_count;
         }
         else
         {
-            //transform.GetComponent<Rigidbody2D>().velocity = new Vector2(-pushBack, pushBack / 2);
-            animator.CurrentAnim = 4;
+            current_state = EnemyState.STUN;
+            invul_timer = invulnerability;
+            HandleKnock();
         }
+    }
+    private void HandleKnock()
+    {
+        if (player.transform.position.x < transform.position.x)
+        {
+            //transform.GetComponent<Rigidbody2D>().velocity = new Vector2(pushBack, pushBack / 2);
+            rb.AddForce(new Vector2(pushBack / 2, pushBack));
+            animator.TriggerKnock();
+        }
+        else
+        {
+            rb.AddForce(new Vector2(-pushBack / 2, pushBack));
+            animator.TriggerKnock();
+            //transform.GetComponent<Rigidbody2D>().velocity = new Vector2(-pushBack, pushBack / 2);
+        }
+    }
+
+    public void FlagAttack()
+    {
+        player.TakeDamage(damage);
+    }
+    public void FlagDisable()
+    {
+        player.RemoveEnemy(this);
+        gameObject.SetActive(false);
     }
 }

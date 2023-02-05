@@ -165,7 +165,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3765131228726644182}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -215,13 +215,16 @@ MonoBehaviour:
   patrol_chase: 0.5
   damage: 1
   speed: 150
+  pushBack: 30
   checkpoints:
   - {fileID: 0}
   - {fileID: 0}
+  invulnerability: 0.1
   attack_c_timer: 0
   attack_w_timer: 0
   idle_timer: 0
   patrol_chase_timer: 0.5
+  invul_timer: 0
   in_range: 0
   current_state: 0
 --- !u!61 &3765131228726644184

@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private GameObject gameManager;
     private CharacterAnimations animator;
     private Collider2D collision_collider;
-    private List<Enemy> enemies = new();
+    public List<Enemy> enemies = new();
 
     public bool canFly = false;
     public bool inCutScene = false;
@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public TMPro.TMP_Text text;
     public int groundLayer = 3;
     public int enemyLayer = 6;
+    private bool dead = false;
 
     public float playerVelocity = 1;
     public float jumpMultiplier = 1;
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     public Healthbar healthbar;
     public Pulse pulse;
     public Image deathscreen;
+
     private float jumpCounter = 0;
     private float height;
     public bool fading;
@@ -61,7 +63,6 @@ public class Player : MonoBehaviour
         playerController.PlayerControls.Interact.performed += ctx => Interaction();
         fading = false;
     }
-
     private void OnEnable()
     {
         playerController.Enable();
@@ -89,7 +90,6 @@ public class Player : MonoBehaviour
         fading = false;
 
     }
-
     private void Update()
     {
         if (health.Health <= 0 && fading == true)
@@ -115,11 +115,11 @@ public class Player : MonoBehaviour
             {
                 if (movementInput.x > 0)
                 {
-                    GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = false;
+                    gameObject.transform.localScale = new Vector3(1, 1, 1);
                 }
                 else if (movementInput.x < 0)
                 {
-                    GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<SpriteRenderer>().flipX = true;
+                    gameObject.transform.localScale = new Vector3(-1, 1, 1);
                 }
             }
             else
@@ -183,7 +183,7 @@ public class Player : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if(!inCutScene)
+        if(!inCutScene && jumpCounter < maxJumpCounter)
         {
             jumpCounter++;
             //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
@@ -251,9 +251,14 @@ public class Player : MonoBehaviour
             }
         }
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health.Health -= damage;
+        if(health.Health <= 0)
+        {
+            inCutScene = true;
+            dead = true;
+        }
         pulse.pulse();
         healthbar.SetHealth(health.Health);
     }
@@ -302,7 +307,7 @@ public class Player : MonoBehaviour
                     index = i;
                 }
             }
-
+            Debug.Log(index);
             enemies[index].DealDamage(1);
         }
     }
@@ -327,6 +332,13 @@ public class Player : MonoBehaviour
             direction.Normalize();
             float moveX = direction.x * playerVelocity * Time.deltaTime;
             rb.velocity = new Vector2(moveX, 0);
+        }
+    }
+    public void RemoveEnemy(Enemy new_enemy)
+    {
+        if(enemies.Contains(new_enemy))
+        {
+            enemies.Remove(new_enemy);
         }
     }
 }
