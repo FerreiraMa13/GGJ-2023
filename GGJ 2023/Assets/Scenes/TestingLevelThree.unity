@@ -6879,7 +6879,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1291741943
 GameObject:
@@ -10468,6 +10468,18 @@ PrefabInstance:
     - target: {fileID: 2802100879416389588, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
       propertyPath: healthbar
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802100879416389588, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
+      propertyPath: BaseJumpForce
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802100879416389588, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
+      propertyPath: jumpMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802100879416389588, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
+      propertyPath: playerVelocity
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 3160350787861377035, guid: 1ffb2ed29700b9b40af1a30c8993841e, type: 3}
       propertyPath: m_SortingOrder

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BarrierScript : MonoBehaviour
 {
-    List<GameObject> enemies = new List<GameObject>();
+    public List<Enemy> enemies = new List<Enemy>();
     GameObject barrierParent;
     public Sprite barrierOpenTexture;
     public Sprite barrierClosedTexture;
@@ -13,7 +13,7 @@ public class BarrierScript : MonoBehaviour
     {
         //enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
         barrierParent = this.gameObject;
-        barrierParent.transform.Find("BarrierTexture").GetComponent<SpriteRenderer>().sprite = barrierClosedTexture;
+        //barrierParent.transform.Find("BarrierTexture").GetComponent<SpriteRenderer>().sprite = barrierClosedTexture;
         barrierParent.transform.Find("BarrierBody").gameObject.SetActive(true); 
     }
     // Start is called before the first frame update
@@ -26,18 +26,28 @@ public class BarrierScript : MonoBehaviour
     void FixedUpdate()
     {
         int enemyCount = enemies.Count;
-        foreach (GameObject enemy in enemies)
+        foreach (Enemy enemy in enemies)
         {
+            
             /*if (*//*enemy.GetComponent<ENEMYSCRIPT>().isDead*//*)
             {
                 enemyCount--;
             }*/
-            Debug.Log("looping enemies"); 
+            //Debug.Log("looping enemies"); 
         }
         if (enemyCount <= 0)
         {
-            barrierParent.transform.Find("BarrierBody").gameObject.SetActive(false);
-            barrierParent.transform.Find("BarrierTexture").GetComponent<SpriteRenderer>().sprite = barrierOpenTexture;
+            Destroy(gameObject);
+            //barrierParent.transform.Find("BarrierBody").gameObject.SetActive(false);
+           // barrierParent.transform.Find("BarrierTexture").GetComponent<SpriteRenderer>().sprite = barrierOpenTexture;
+        }
+    }
+
+    public void RemoveEnemy(Enemy new_enemy)
+    {
+        if (enemies.Contains(new_enemy))
+        {
+            enemies.Remove(new_enemy);
         }
     }
 }
