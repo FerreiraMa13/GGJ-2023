@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7532125288986084120}
   - component: {fileID: 6612159629809964710}
   - component: {fileID: 6076013150378678160}
+  - component: {fileID: 2429109780622741250}
   - component: {fileID: 4533827286438941374}
   - component: {fileID: 1700893673664020428}
   - component: {fileID: 4564619640971237130}
@@ -40,7 +41,7 @@ Transform:
   - {fileID: 7200343545965344032}
   - {fileID: 6262332080713380301}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6612159629809964710
 MonoBehaviour:
@@ -168,6 +169,18 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2429109780622741250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4910289981684865579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe968b6beaee7d44bbb6240e24ec705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &4533827286438941374
 Rigidbody2D:
   serializedVersion: 4
