@@ -12,7 +12,10 @@ public class Player : MonoBehaviour
     private GameObject gameManager;
     private CharacterAnimations animator;
     private Collider2D collision_collider;
+    private GameObject camera;
     public List<Enemy> enemies = new();
+
+    public Vector2 cameraClamp; 
 
     public bool canFly = false;
     public bool inCutScene = false;
@@ -23,14 +26,12 @@ public class Player : MonoBehaviour
     private bool dead = false;
 
     public float playerVelocity = 1;
-    public float jumpMultiplier = 1;
-    public float BaseJumpForce = 1000f;
+    public float baseJumpVelocity = 50;
     public float maxJumpCounter = 1;
     public Healthbar healthbar;
     public Pulse pulse;
     public Image deathscreen;
-
-    private float jumpCounter = 0;
+    public float jumpCounter = 0;
     private float height;
     public bool fading;
     private float fade_dur = 1.0f;
@@ -38,17 +39,23 @@ public class Player : MonoBehaviour
     public TMPro.TMP_Text deadtext1;
     public TMPro.TMP_Text deadtext2;
     private Vector2 movementInput = Vector2.zero;
-    [SerializeField] private bool grounded = false;
+    public bool grounded = false;
 
     public float attack_cooldown = 0.2f;
     private float attack_timer = 0.0f;
     private int attack_index = 1;
     private Transform move_target;
     public float auto_move_treshold = 5;
+
+    public float jumpCD = 0.1f;
+    public float jumpTimer = 0;
+    public bool canJump = true;
+
     private void Awake()
     {
         playerController = new PlayerController();
         rb = GetComponent<Rigidbody2D>();
+        camera = transform.Find("Main Camera").gameObject;
         foreach (var comp in GetComponents<Collider2D>())
         {
             if (!comp.isTrigger)
@@ -61,6 +68,7 @@ public class Player : MonoBehaviour
         height = GetComponent<BoxCollider2D>().bounds.extents.y;
         animator = GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<CharacterAnimations>();
         playerController.PlayerControls.Interact.performed += ctx => Interaction();
+        playerController.PlayerControls.Jump.performed += Jump;
         fading = false;
     }
     private void OnEnable()
@@ -169,7 +177,28 @@ public class Player : MonoBehaviour
         {
             attack_timer -= Time.deltaTime;
         }
+
+        if(grounded)
+        {
+            canJump = true; 
+        }
+
+        if (jumpTimer < jumpCD)
+        {
+            jumpTimer += Time.deltaTime;
+            canJump = false;
+        }
+        else
+        {
+            canJump = true; 
+        }
     }
+
+    private void LateUpdate()
+    {
+        CheckCamera();
+    }
+
     private void HandleMovement()
     {
         float moveX = movementInput.x * playerVelocity * Time.deltaTime;
@@ -181,16 +210,19 @@ public class Player : MonoBehaviour
 
         rb.velocity = new Vector2(moveX, moveY);
     }
+
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if(!inCutScene && jumpCounter < maxJumpCounter)
+        if(!inCutScene && jumpCounter < maxJumpCounter && canJump)
         {
             jumpCounter++;
+            jumpTimer = 0; 
             //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
-            rb.velocity = new Vector2(rb.velocity.x, BaseJumpForce * jumpMultiplier);
+            rb.velocity = new Vector2(rb.velocity.x, baseJumpVelocity);
             grounded = false;
         }
     }
+
     public void MovementInput(InputAction.CallbackContext ctx)
     {
         if(!inCutScene)
@@ -221,8 +253,8 @@ public class Player : MonoBehaviour
                 if (playerLowPoint > objectHighPoint)
                 {
                     sfxManager.sfxInstance.audio.PlayOneShot(sfxManager.sfxInstance.land);
-                    jumpCounter = 0;
-                    grounded = true;
+                    //jumpCounter = 0;
+                    //grounded = true;
                 }
             }
         }
@@ -238,7 +270,7 @@ public class Player : MonoBehaviour
                 float objectHighPoint = hitObject.transform.position.y - collision.bounds.extents.y;
                 if (playerLowPoint > objectHighPoint)
                 {
-                    grounded = false;
+                    //grounded = false;
                 }
             }
         }
@@ -332,6 +364,22 @@ public class Player : MonoBehaviour
             direction.Normalize();
             float moveX = direction.x * playerVelocity * Time.deltaTime;
             rb.velocity = new Vector2(moveX, 0);
+        }
+    }
+    public void CheckCamera()
+    {
+        if (transform.position.x < cameraClamp.x)
+        {
+            Debug.Log("camera clamped on left");
+            camera.transform.localPosition = new Vector3(cameraClamp.x - transform.position.x, camera.transform.localPosition.y, -5);
+        }
+        else if (transform.position.x > cameraClamp.y)
+        {
+            camera.transform.localPosition = new Vector3(cameraClamp.y - transform.position.x, camera.transform.localPosition.y, -5);
+        }
+        else
+        {
+            camera.transform.localPosition = new Vector3(0, 0, -5);
         }
     }
     public void RemoveEnemy(Enemy new_enemy)

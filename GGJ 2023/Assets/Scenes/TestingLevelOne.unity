@@ -54434,6 +54434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
+  cameraClamp: {x: 8, y: 55}
   canFly: 0
   inCutScene: 0
   healthb: {fileID: 4158475716859047738}
@@ -54442,7 +54443,7 @@ MonoBehaviour:
   enemyLayer: 6
   playerVelocity: 600
   jumpMultiplier: 1
-  BaseJumpForce: 40
+  baseJumpVelocity: 30
   maxJumpCounter: 2
   healthbar: {fileID: 4158475716859047736}
   pulse: {fileID: 4158475716659447035}
