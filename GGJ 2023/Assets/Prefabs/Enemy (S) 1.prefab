@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 907714583426881829}
   - component: {fileID: 907714583426881828}
   - component: {fileID: 907714583426881826}
+  - component: {fileID: 8226822959891262292}
   m_Layer: 0
   m_Name: Skeleton_Renderer
   m_TagString: SkeletonAnim
@@ -118,9 +119,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3619308a48155c479fd8583cfa4d439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy_script: {fileID: 0}
   anim: {fileID: 907714583426881828}
   CurrentAnim: 0
   skeleton_input: 0
+--- !u!61 &8226822959891262292
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907714583426881830}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.45, y: 0.51}
+    newSize: {x: 0.45, y: 0.51}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1}
+  m_EdgeRadius: 0
 --- !u!1 &3765131228726644182
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +183,7 @@ Transform:
   m_Children:
   - {fileID: 907714583426881831}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3765131228726644180
 Rigidbody2D:
@@ -169,7 +197,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -206,26 +234,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db85ecd4e7ab830468eed24f01dc6249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
-  attack_range: 0.5
-  attack_cooldown: 3
+  hp: 4
+  attack_range: 1
+  attack_cooldown: 2
   attack_window: 0.2
   idle_duration: 3
   patrol_leeway: 1
   patrol_chase: 0.5
-  damage: 1
+  damage: 50
   speed: 150
-  pushBack: 30
+  pushBack: 2
+  invulnerability: 1.2
+  dead_count: 3
   checkpoints:
   - {fileID: 0}
   - {fileID: 0}
-  invulnerability: 0.1
-  attack_c_timer: 0
-  attack_w_timer: 0
-  idle_timer: 0
-  patrol_chase_timer: 0.5
-  invul_timer: 0
-  in_range: 0
   current_state: 0
 --- !u!61 &3765131228726644184
 BoxCollider2D:
@@ -251,5 +274,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0

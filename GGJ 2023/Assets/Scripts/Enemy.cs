@@ -28,20 +28,22 @@ public class Enemy : MonoBehaviour
     public int damage = 1;
     public float speed = 1.0f;
     public float pushBack = 30; 
-    public List<Transform> checkpoints = new();
+    
     public float invulnerability = 0.1f;
     public float dead_count = 3.0f;
-    private BarrierScript barrier;
+    public List<Transform> checkpoints = new();
 
-    [SerializeField] private float attack_c_timer = 0;
-    [SerializeField] private float attack_w_timer = 0;
-    [SerializeField] private float idle_timer = 0;
-    [SerializeField] private float patrol_chase_timer = 0;
-    [SerializeField] private float invul_timer = 0;
-    [SerializeField] private bool in_range = false;
+    
+    private float attack_c_timer = 0;
+    private float attack_w_timer = 0;
+    private float idle_timer = 0;
+    private float patrol_chase_timer = 0;
+    private float invul_timer = 0;
+    private bool in_range = false;
     private bool out_range = false;
     private int checkpoint_index = 0;
     private Transform current_checkpoint;
+    private BarrierScript barrier;
     private int checkpoint_direction = 1;
     private float speed_multiplier = 1.0f;
     private float chase_multiplier = 1.2f;
@@ -100,10 +102,13 @@ public class Enemy : MonoBehaviour
     }
     private void HandleStates()
     {
-        if(in_range)
+        if(current_state == EnemyState.PATROLLING || current_state == EnemyState.IDLE)
         {
-            current_state = EnemyState.CHASING;
-            speed_multiplier = chase_multiplier;
+            if (in_range)
+            {
+                current_state = EnemyState.CHASING;
+                speed_multiplier = chase_multiplier;
+            }
         }
     }
     private void HandleMovement()
@@ -158,6 +163,9 @@ public class Enemy : MonoBehaviour
                     current_state = EnemyState.IDLE;
                     idle_timer = idle_duration / 2;
                 }
+                break;
+            case EnemyState.DEAD:
+                animator.SetVelocity(0);
                 break;
         }
     }
@@ -236,11 +244,12 @@ public class Enemy : MonoBehaviour
         hp -= damage_taken;
         if(hp <= 0)
         {
-            Debug.Log("Dead");
             hp = 0;
             animator.TriggerDead();
             current_state = EnemyState.DEAD;
             dead_timer = dead_count;
+            collision_collider.enabled = false;
+            rb.velocity = Vector3.zero;
         }
         else
         {
@@ -253,18 +262,17 @@ public class Enemy : MonoBehaviour
     {
         if (player.transform.position.x < transform.position.x)
         {
-            //transform.GetComponent<Rigidbody2D>().velocity = new Vector2(pushBack, pushBack / 2);
-            rb.AddForce(new Vector2(pushBack / 2, pushBack));
+            transform.GetComponent<Rigidbody2D>().velocity = new Vector2(pushBack, pushBack / 2);
+            //rb.AddForce(new Vector2(pushBack / 2, pushBack));
             animator.TriggerKnock();
         }
         else
         {
-            rb.AddForce(new Vector2(-pushBack / 2, pushBack));
+            //rb.AddForce(new Vector2(-pushBack / 2, pushBack));
             animator.TriggerKnock();
-            //transform.GetComponent<Rigidbody2D>().velocity = new Vector2(-pushBack, pushBack / 2);
+            transform.GetComponent<Rigidbody2D>().velocity = new Vector2(-pushBack, pushBack / 2);
         }
     }
-
     public void FlagAttack()
     {
         player.TakeDamage(damage);

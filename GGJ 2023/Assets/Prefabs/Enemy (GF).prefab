@@ -34,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 6330312213726933444}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &276694152688051540
 Rigidbody2D:
@@ -48,7 +48,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -94,18 +94,12 @@ MonoBehaviour:
   patrol_chase: 0.5
   damage: 20
   speed: 170
-  pushBack: 100
+  pushBack: 1.2
+  invulnerability: 0.5
+  dead_count: 3
   checkpoints:
   - {fileID: 0}
   - {fileID: 0}
-  invulnerability: 0.1
-  dead_count: 3
-  attack_c_timer: 0
-  attack_w_timer: 0
-  idle_timer: 0
-  patrol_chase_timer: 0.5
-  invul_timer: 0
-  in_range: 0
   current_state: 0
 --- !u!61 &276694152688051544
 BoxCollider2D:
@@ -131,7 +125,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 2, y: 2.5}
   m_EdgeRadius: 0
 --- !u!1 &1053555757539040622
 GameObject:
