@@ -371,15 +371,15 @@ public class Player : MonoBehaviour
         if (transform.position.x < cameraClamp.x)
         {
             Debug.Log("camera clamped on left");
-            camera.transform.localPosition = new Vector3(cameraClamp.x - transform.position.x, camera.transform.localPosition.y, -5);
+            camera.transform.position = new Vector3(/*cameraClamp.x - transform.position.x*/cameraClamp.x, transform.position.y, -5);
         }
         else if (transform.position.x > cameraClamp.y)
         {
-            camera.transform.localPosition = new Vector3(cameraClamp.y - transform.position.x, camera.transform.localPosition.y, -5);
+            camera.transform.position = new Vector3(/*cameraClamp.y - transform.position.x*/cameraClamp.y, transform.position.y, -5);
         }
         else
         {
-            camera.transform.localPosition = new Vector3(0, 0, -5);
+            camera.transform.position = new Vector3(transform.position.x, transform.position.y, -5);
         }
     }
     public void RemoveEnemy(Enemy new_enemy)

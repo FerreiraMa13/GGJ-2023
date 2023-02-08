@@ -27,6 +27,7 @@ public class FeetScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 3)
         {
+            Debug.Log("on ground");
             parent.GetComponent<Player>().grounded = true;
         }
     }
@@ -34,6 +35,7 @@ public class FeetScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 3)
         {
+            Debug.Log("on ground");
             parent.GetComponent<Player>().jumpCounter = 0; 
         }
     }
