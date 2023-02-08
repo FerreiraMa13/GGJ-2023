@@ -8,11 +8,14 @@ public class Player : MonoBehaviour
 {
     private PlayerController playerController;
     private InputAction movement;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private GameObject gameManager;
+    public GameObject camera;
     private CharacterAnimations animator;
     private Collider2D collision_collider;
     public List<Enemy> enemies = new();
+
+    public Vector2 cameraClamp;
 
     public bool canFly = false;
     public bool inCutScene = false;
@@ -24,30 +27,41 @@ public class Player : MonoBehaviour
 
     public float playerVelocity = 1;
     public float jumpMultiplier = 1;
-    public float BaseJumpForce = 1000f;
+    public float baseJumpVelocity = 50;
     public float maxJumpCounter = 1;
+
+    public float jumpCD = 0.1f;
+    public float jumpTimer = 0;
+    public bool canJump = true;
+
     public Healthbar healthbar;
     public Pulse pulse;
     public Image deathscreen;
 
-    private float jumpCounter = 0;
-    private float height;
+    public float jumpCounter = 0;
+    public float height;
     public bool fading;
     private float fade_dur = 1.0f;
     private float lerp_start = 0;
     public TMPro.TMP_Text deadtext1;
     public TMPro.TMP_Text deadtext2;
     private Vector2 movementInput = Vector2.zero;
-    [SerializeField] private bool grounded = false;
+    public bool grounded = false;
 
     public float attack_cooldown = 0.2f;
     private float attack_timer = 0.0f;
     private int attack_index = 1;
     private Transform move_target;
     public float auto_move_treshold = 5;
+
+    public float bubbleTimer = 0;
+    [Range(1,10)] public float maxBubbleTimer = 5f;
+    GameObject bubbleObject;
+
     private void Awake()
     {
         playerController = new PlayerController();
+        camera = transform.Find("Main Camera").gameObject;
         rb = GetComponent<Rigidbody2D>();
         foreach (var comp in GetComponents<Collider2D>())
         {
@@ -61,7 +75,10 @@ public class Player : MonoBehaviour
         height = GetComponent<BoxCollider2D>().bounds.extents.y;
         animator = GameObject.FindGameObjectWithTag("PlayerAnim").GetComponent<CharacterAnimations>();
         playerController.PlayerControls.Interact.performed += ctx => Interaction();
+        playerController.PlayerControls.Jump.performed += Jump;
         fading = false;
+
+        bubbleObject = transform.Find("ChatBubble").gameObject;
     }
     private void OnEnable()
     {
@@ -116,10 +133,14 @@ public class Player : MonoBehaviour
                 if (movementInput.x > 0)
                 {
                     gameObject.transform.localScale = new Vector3(1, 1, 1);
+                    transform.Find("ChatBubble").transform.localScale = new Vector3(1, 1, 1);
+                    transform.Find("ChatBubble").transform.localPosition = new Vector3(2.5f, 4.15f, -0.25f);
                 }
                 else if (movementInput.x < 0)
                 {
                     gameObject.transform.localScale = new Vector3(-1, 1, 1);
+                    transform.Find("ChatBubble").transform.localScale = new Vector3(-1, 1, 1);
+                    transform.Find("ChatBubble").transform.localPosition = new Vector3(-2.5f, 4.15f, -0.25f);
                 }
             }
             else
@@ -169,6 +190,38 @@ public class Player : MonoBehaviour
         {
             attack_timer -= Time.deltaTime;
         }
+
+        if (grounded)
+        {
+            canJump = true;
+        }
+
+        if (jumpTimer < jumpCD)
+        {
+            jumpTimer += Time.deltaTime;
+            canJump = false;
+        }
+        else
+        {
+            canJump = true;
+        }
+
+        if (bubbleObject.activeSelf)
+        {
+            if (bubbleTimer > maxBubbleTimer)
+            {
+                bubbleObject.SetActive(false);
+            }
+            else
+            {
+                bubbleTimer += Time.deltaTime;
+            }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        CheckCamera();
     }
     private void HandleMovement()
     {
@@ -183,11 +236,12 @@ public class Player : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if(!inCutScene && jumpCounter < maxJumpCounter)
+        if (!inCutScene && jumpCounter < maxJumpCounter && canJump)
         {
             jumpCounter++;
+            jumpTimer = 0;
             //rb.AddForce(new Vector2(0f, BaseJumpForce * jumpMultiplier));
-            rb.velocity = new Vector2(rb.velocity.x, BaseJumpForce * jumpMultiplier);
+            rb.velocity = new Vector2(rb.velocity.x, baseJumpVelocity * jumpMultiplier);
             grounded = false;
         }
     }
@@ -211,7 +265,7 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        GameObject hitObject = collision.gameObject;
+        /*GameObject hitObject = collision.gameObject;
         if(hitObject.layer == groundLayer)
         {
             if(!grounded && rb.velocity.y < 0)
@@ -221,11 +275,11 @@ public class Player : MonoBehaviour
                 if (playerLowPoint > objectHighPoint)
                 {
                     sfxManager.sfxInstance.audio.PlayOneShot(sfxManager.sfxInstance.land);
-                    jumpCounter = 0;
-                    grounded = true;
+                    //jumpCounter = 0;
+                    //grounded = true;
                 }
             }
-        }
+        }*/
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -236,10 +290,10 @@ public class Player : MonoBehaviour
             {
                 float playerLowPoint = transform.position.y + height;
                 float objectHighPoint = hitObject.transform.position.y - collision.bounds.extents.y;
-                if (playerLowPoint > objectHighPoint)
+                /*if (playerLowPoint > objectHighPoint)
                 {
                     grounded = false;
-                }
+                }*/
             }
         }
         if(hitObject.layer == enemyLayer)
@@ -339,6 +393,25 @@ public class Player : MonoBehaviour
         if(enemies.Contains(new_enemy))
         {
             enemies.Remove(new_enemy);
+        }
+    }
+
+    public void CheckCamera()
+    {
+        if (transform.position.x < cameraClamp.x)
+        {
+            Debug.Log("camera clamped on left");
+            camera.transform.position = new Vector3(/*cameraClamp.x - transform.position.x*/cameraClamp.x, transform.position.y, -5);
+        }
+        else if (transform.position.x > cameraClamp.y)
+        {
+            Debug.Log("camera clamped on right");
+            camera.transform.position = new Vector3(/*cameraClamp.y - transform.position.x*/cameraClamp.y, transform.position.y, -5);
+        }
+        else
+        {
+            Debug.Log("camera NOT clamped");
+            camera.transform.position = new Vector3(transform.position.x, transform.position.y, -5);
         }
     }
 }

@@ -124,7 +124,7 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""4d5b9317-bde8-4c28-a5d3-898555c8e6d1"",
                     ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap(duration=1)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",

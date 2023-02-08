@@ -6651,6 +6651,14 @@ PrefabInstance:
       propertyPath: deathscreen
       value: 
       objectReference: {fileID: 1390075895}
+    - target: {fileID: 6612159629809964710, guid: db201bc13f8f9fa4ab0b92562a5b191a, type: 3}
+      propertyPath: cameraClamp.x
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612159629809964710, guid: db201bc13f8f9fa4ab0b92562a5b191a, type: 3}
+      propertyPath: cameraClamp.y
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 7532125288986084120, guid: db201bc13f8f9fa4ab0b92562a5b191a, type: 3}
       propertyPath: m_RootOrder
       value: 9
