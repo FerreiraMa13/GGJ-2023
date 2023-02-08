@@ -174,6 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5568200129630055972}
   - component: {fileID: 4318861591490496473}
+  - component: {fileID: 121010836629506779}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Untagged
@@ -210,5 +211,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89da0eed77da63b4d9cc6042f13a4d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemies: []
   barrierOpenTexture: {fileID: 21300000, guid: ec370294ecd307945bd986c9cf122fd9, type: 3}
   barrierClosedTexture: {fileID: 21300000, guid: a1d290d23fa4138408915b3fc6a4741c, type: 3}
+--- !u!61 &121010836629506779
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693541448279033574}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.025582314, y: -0.5342694}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.214906, y: 1.1602782}
+  m_EdgeRadius: 0
